@@ -1,0 +1,30 @@
+@use '../../sass/var';
+@use '../../sass/mixins';
+
+.hero {
+    min-height: 100vh;
+    // height: 60.2rem;
+    position: relative;
+    &__wrap {
+        width: 88rem;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0;
+        .display:first-child {
+            justify-self: start;
+        }
+        .display:nth-child(2) {
+            justify-self: center;
+        }
+        .display:nth-child(3) {
+            justify-self: end;
+        }
+
+        .display--xs {
+            width: 17ch;
+            position: absolute;
+            top: 40%;
+            right: 0;
+        }
+    }
+}

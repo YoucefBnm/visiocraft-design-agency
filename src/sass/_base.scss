@@ -1,0 +1,35 @@
+@use './var';
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: unset;
+  font-variant-numeric: tabular-nums;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  color-scheme: dark;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: var.$font-body;
+    line-height: 1.55;
+    min-height: 100vh;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var.$color-light;
+    font-variant-numeric: tabular-nums;
+    background: url('./assets/images/Noise.png'), var.$color-dark;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}

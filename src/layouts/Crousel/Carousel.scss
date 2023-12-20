@@ -1,0 +1,23 @@
+.carousel {
+    position: relative;
+    height: 150rem;
+    &__container {
+        position: sticky;
+        left: 0;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+
+    }
+    &__item {
+
+        img {
+            vertical-align: middle;
+        }
+    }
+    &__row {
+    }
+    &__item {
+
+    }
+}

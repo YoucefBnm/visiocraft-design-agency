@@ -1,0 +1,20 @@
+@use '../../sass/var';
+
+.featureCard {
+    // max-width: 36rem;
+    // border: 1px solid rgba(var.$color-purple-3, .2);
+    // border-radius: 20px;
+    // background-image: var.$linear-card;
+    height: 100%;
+    background-color: darken(var.$color-dark, 2%);
+    border-left: 1px solid rgba(var.$color-light, .2);
+
+    border-right: 1px solid rgba(var.$color-light, .2);
+
+    &:not(:first-child) {
+        border-left: 1px solid rgba(var.$color-light, .2);
+    }
+    &:not(:last-child) {
+        border-right: 1px solid rgba(var.$color-light, .2);
+    }
+}

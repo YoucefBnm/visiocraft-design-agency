@@ -1,0 +1,14 @@
+.features {
+    background-image: url('../../assets/images/ellipse-secondary.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    &__ellipse {
+        position: absolute;
+        z-index: -1;
+        left: -5rem;
+        width: 25rem;
+        height: 25rem;
+        img { vertical-align: middle;}
+    }
+}

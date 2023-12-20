@@ -1,0 +1,23 @@
+@use '../../sass/var';
+
+.ctaBtn {
+    line-height: 120%;
+    cursor: pointer;
+    &--bg,
+    &--shadow {
+        border-radius: 5rem;
+        padding: 18px 32px;
+        min-width: 6.5rem;
+    }
+
+    &--bg {
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        background: rgba(128, 128, 128, 0.10);
+        transition: all .25s ease;
+        &:hover {
+            border: 1px solid #8635EE;
+            box-shadow: 0px 2px 50px 0px #192BC2;
+        }
+    }
+}

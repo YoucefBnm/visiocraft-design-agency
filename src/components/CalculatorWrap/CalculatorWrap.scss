@@ -1,0 +1,13 @@
+@use '../../sass/mixins';
+
+.calculatorWrap {
+    border-right: '1px solid rgba(#BF94F6, .5)';
+    background: linear-gradient(180deg, rgba(43, 36, 154, 0.20) 0%, rgba(98, 77, 190, 0.10) 100%);
+    z-index: 5;
+    @include mixins.respond(tab-port) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    @include mixins.respond(phone) {
+    }
+}

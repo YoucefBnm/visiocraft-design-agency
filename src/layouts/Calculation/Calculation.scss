@@ -1,0 +1,38 @@
+@use '../../sass/mixins';
+
+.calculation {
+    overflow: hidden;
+    position: relative;
+    background-image: url('../../assets/images/ellipse-secondary.png');
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    &__container {
+
+    }
+    &__calculator {
+        border-radius: 2rem;
+        overflow: hidden;
+        .calculatorTotal {
+            @include mixins.respond(phone) {
+                min-width: 100%;
+                max-height: 100%;
+            }
+        }
+        @include mixins.respond(phone) {
+            display: flex;
+            flex-direction: column;
+        }
+        .calculatorTotal {
+            @include mixins.respond(phone) {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+    
+        }
+        
+        
+        
+    }
+    &__text {
+    }
+}

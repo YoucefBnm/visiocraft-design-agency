@@ -1,0 +1,147 @@
+@use './var';
+@use './mixins';
+
+.input {
+    cursor: pointer;
+    font: inherit;
+    &--form,
+    &--textarea {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 2px;
+        border: 1px solid rgba(var.$color-accent, 0.50);
+        background: rgba(0,0,0, .5);
+        transition: all .2s ease;
+
+        &:focus {
+            outline: 2px ridge rgba(var.$color-accent, 0.70);
+        }
+    }
+    &--label {
+        text-transform: capitalize;
+    }
+    &--main {
+        cursor: pointer;
+        padding: .5rem 2.5rem;
+        gap: .5rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(var.$color-accent, 0.50)
+    }
+    &--check {
+        position: absolute;
+        bottom: .5rem;
+        left: .8rem;
+        display: inline-block;
+        vertical-align: middle;
+        img { vertical-align: middle}
+    }
+    &--radio {
+        position: absolute;    
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        appearance: none;
+        cursor: pointer;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &--range {
+        appearance: none;
+        height: 1.5rem;
+        cursor: pointer;
+        background: none;
+        position: relative;
+        flex-grow: 0;
+        width: 34rem;
+        @include mixins.respond(tab-port) {
+            width: 25rem;
+        }
+        @include mixins.respond(phone) {
+            width: 34rem;
+        }
+        flex-shrink: 0;
+        &::-webkit-slider-runnable-track {
+            height: 100%;
+            border-radius: 1rem;
+            border: 1px solid rgba(darken(var.$color-accent, .2), 0.50)
+
+        }
+        &::-webkit-slider-thumb {
+            position: relative;
+            height: 2.5rem;
+            width: 2.5rem;
+            border-radius: 50%;
+            cursor: e-resize;
+            appearance: none;
+            background: var.$color-success;
+            background-image: radial-gradient(69.32% 99.13% at 13.73% 16.39%, var.$color-success 0%, var.$color-success 61.46%, darken(var.$color-success, 10%) 98.33%);;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+    }
+
+    &--value {
+        display: inline-flex;
+        padding: .25rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
+        border: 1px solid rgba(darken(var.$color-accent, .2), 0.50);
+        min-width: 7rem;
+        font-family: sans-serif;
+        font-weight: 500;
+        
+    }
+    &--progress {
+        position: absolute;
+        top: .5rem;
+        left: 0;
+        max-width: 99%;
+        height: 1.5rem;
+        border-radius: 2rem 1.5rem 1.5rem 2rem;
+        pointer-events: none;
+        background: radial-gradient(69.32% 99.13% at 13.73% 16.39%, var.$color-success 0%, var.$color-success 61.46%, lighten(var.$color-success, 10%) 98.33%);;
+        border: 1px solid rgba(darken(var.$color-accent, .2), 0.50)
+
+    }
+
+    
+    &--switch {
+        width: 5rem;
+        height: 2rem;
+        border-radius: 9999px;
+        position: relative;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid rgba(darken(var.$color-accent, .2), 0.50);
+        appearance: none;
+        &--active {
+            background-color: var.$color-success;
+        }
+        &--input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            appearance: none;
+            cursor: pointer;
+        }
+        &--handle {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            background: radial-gradient(69.32% 99.13% at 13.73% 16.39%, var.$color-success 0%, var.$color-success 61.46%, darken(var.$color-success, 5%) 98.33%);;
+            pointer-events: none;
+        }
+    }
+}
