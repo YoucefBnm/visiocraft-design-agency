@@ -2,9 +2,11 @@
 @use '../../sass/mixins';
 
 .hero {
-    min-height: 100vh;
+    // min-height: 100vh;
     // height: 60.2rem;
     position: relative;
+    @include mixins.respond(tab-port) {
+    }
     &__wrap {
         width: 88rem;
         display: grid;
@@ -19,7 +21,9 @@
         .display:nth-child(3) {
             justify-self: end;
         }
-
+        @include mixins.respond(tab-port) {
+            width: 100%;
+        }
         .display--xs {
             width: 17ch;
             position: absolute;

@@ -19,7 +19,8 @@ const Transition = (Component) =>
                         width: '100%',
                         height: '100vh',
                         background: '#DBD3D8',
-                        transformOrigin: 'bottom'
+                        transformOrigin: 'bottom',
+                        zIndex: 999
                     }}
                 />
                 <motion.div
@@ -35,7 +36,9 @@ const Transition = (Component) =>
                         width: '100%',
                         height: '100vh',
                         background: '#DBD3D8',
-                        transformOrigin: 'top'
+                        transformOrigin: 'top',
+                        zIndex: 999
+
                     }}
                 />
             </>

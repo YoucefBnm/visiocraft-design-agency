@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="footer pad--default flex flex--wrap flex--align-start flex--justify-between gap--4">
-      <StaggerContainer style="flex flex--col gap--1 flex--center  color--grey ">
+      <StaggerContainer style="flex flex--col gap--1 flex--center  color--grey overflow--hidden">
         <motion.div variants={fadeVariants('bottom')}>
           <img src={Logo} alt='visiocarft logo' />
         </motion.div>
@@ -18,7 +18,7 @@ const Footer = () => {
         </motion.p>
       </StaggerContainer>
 
-      <StaggerContainer style='flex flex--col gap--1'>
+      <StaggerContainer style='flex flex--col gap--1 overflow--hidden'>
         {
           footerLinks.map(link => (
             <a 
@@ -34,7 +34,7 @@ const Footer = () => {
       </StaggerContainer>
 
       <div className="flex flex--col gap--2">
-        <StaggerContainer>
+        <StaggerContainer style='overflow--hidden'>
           <motion.div variants={fadeVariants('left')} className='flex width--100'>
             <div className="flex gap--1 flex--col">
               <h4 className="display display--xs">Give us a Call</h4>
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </motion.div>
         </StaggerContainer>
-        <StaggerContainer>
+        <StaggerContainer style='overflow--hidden'>
           <motion.div variants={fadeVariants('left')} className='gap--2 radius--1 flex width--100'>
             <div className="flex gap--1 flex--col">
               <h4 className="display display--xs">Leave us a Message</h4>

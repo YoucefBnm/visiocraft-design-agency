@@ -9,6 +9,9 @@
     &__container {
         .display--md {
             width: 25ch;
+            @include mixins.respond(phone) {
+                width: 17ch;
+            }
         }
         position: sticky;
         width: 100%;

@@ -12,8 +12,8 @@ const Carousel = () => {
     const { scrollYProgress } = useScroll({
         target: targetRef
     })
-    const x = useTransform(scrollYProgress, [0, 1], [-100, 100])
-    const xReverse = useTransform(scrollYProgress, [0, 1], [100, -100])
+    const x = useTransform(scrollYProgress, [0, 1], [-250, 100])
+    const xReverse = useTransform(scrollYProgress, [0, 1], [100, -250])
 
   return (
     <section id='showcase' ref={targetRef} className="carousel pos--relative">
