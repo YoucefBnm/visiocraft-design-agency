@@ -1,0 +1,14 @@
+@use '../../sass/var';
+.nav {
+    z-index: 999;
+    background-clip: content-box;
+    &__logo {
+        background-clip: content-box;
+        backdrop-filter: blur(10px);
+    }
+
+    position: sticky;
+    width: 100%;
+    top: 0;
+    margin-bottom: 2rem;
+}

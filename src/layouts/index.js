@@ -4,9 +4,10 @@ import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import Nav from "./Nav/Nav";
 import Services from "./Services/Services";
-import Showcase from "./Showcase/Showcase";
+import Portfolio from "./Portfolio/Portfolio";
 import Features from "./Features/Features";
 import Carousel from "./Crousel/Carousel";
+import UserFormWrap from "./UserFormWrap/UserFormWrap";
 
 export {
     About,
@@ -15,7 +16,8 @@ export {
     Hero,
     Nav,
     Services,
-    Showcase,
+    Portfolio,
     Features,
-    Carousel
+    Carousel,
+    UserFormWrap,
 }

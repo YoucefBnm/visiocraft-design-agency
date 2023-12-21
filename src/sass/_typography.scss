@@ -11,10 +11,22 @@
     &--xl { 
         font-size: 12rem; 
         font-weight: 700;
+        @include mixins.respond(tab-port) {
+            font-size: 8rem;
+        }
+        @include mixins.respond(phone) {
+            font-size: 6.2rem;
+        }
     }
     &--md {
         font-size: 5.2rem;
         font-weight: 600;
+        @include mixins.respond(tab-port) {
+            font-size: 4rem;
+        }
+        @include mixins.respond(phone) {
+            font-size: 3rem;
+        }
     }
     &--sm {
         font-size: 3.2rem;
@@ -23,6 +35,8 @@
         font-size: 1.2rem;
         position: relative;
         padding-left: 1rem;
+        display: inline-flex;
+        color: var.$color-grey;
         &::before {
             content: '';
             width: .6rem;
@@ -50,7 +64,12 @@
 }
 
 .bg {
+    &--dark { background-color: var.$color-dark;}
     &--dark-2 { background-color: var.$color-dark-2;}
+    &--dark-3 { background-color: var.$color-dark-3;}
+    &--primary { background-color: var.$color-primary;}
+    &--success { background-color: var.$color-success;}
+    &--danger { background-color: red($color: var.$color-primary);}
 }
 .color {
     &--white { color: #fff; }

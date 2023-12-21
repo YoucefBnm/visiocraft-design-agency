@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const ServiceRow = ({ xLeft, xRight, icon, title, paragraph }) => {
+const ServiceRow = ({ xLeft, xRight,  titleMain, titleSup, paragraph,icon }) => {
   return (
     <>
       <motion.div 
@@ -14,8 +14,10 @@ const ServiceRow = ({ xLeft, xRight, icon, title, paragraph }) => {
         className='services__card'
         style={{ x: xRight }}
       >
-        <h3 className="display display--sm mar--b-2">{title}</h3>
-        <p>{paragraph}</p>
+        <h4 className="display display--xs mar--b-1 color--grey">{titleSup}</h4>
+
+        <h3 className="display display--sm mar--b-2">{titleMain}</h3>
+        <p className='text--md'>{paragraph}</p>
       </motion.div>
     </>
   )

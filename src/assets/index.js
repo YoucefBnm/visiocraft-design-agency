@@ -25,6 +25,7 @@ import PortfolioActifeetHeroImageSm from './images/portfolio-actifeet-hero-sm.jp
 import PortfolioActifeet2ImageSm from './images/portfolio-actifeet-2-sm.jpg'
 import PortfolioYogaHeroImageSm from './images/portfolio-yoga-hero-sm.jpg'
 import PortfolioDesignHeroImageSm from './images/portfolio-design-hero-sm.jpg'
+import IconRocket from './icons/icon-rocket.svg'
 
 import Bg from './images/bg.png'
 import EllipseBlur1 from './images/ellipse-blur-1.png'
@@ -98,6 +99,8 @@ export {
     HeroBgImage,
     BgBlurPrimary,
 
+    IconRocket,
+    
     IconExpertise,
     IconSolution,
     IconApproach,

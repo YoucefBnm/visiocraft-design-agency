@@ -55,3 +55,9 @@ export const fadeVariants = (direction) => {
     }
   }
 }
+
+export const springTransitionConfig = {
+  type: 'spring',
+  stiffness: 800,
+  damping: 80,
+}

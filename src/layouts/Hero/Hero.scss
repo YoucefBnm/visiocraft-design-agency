@@ -8,7 +8,7 @@
     &__wrap {
         width: 88rem;
         display: grid;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: repeat(3, min-content);
         gap: 0;
         .display:first-child {
             justify-self: start;
@@ -23,8 +23,15 @@
         .display--xs {
             width: 17ch;
             position: absolute;
-            top: 40%;
+            top: 35%;
             right: 0;
+            @include mixins.respond(tab-port) {
+                top: 10rem;
+            }
+            @include mixins.respond(phone) {
+                position: relative;
+                top: 0;
+            }
         }
     }
 }

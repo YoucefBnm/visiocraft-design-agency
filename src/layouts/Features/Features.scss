@@ -1,14 +1,61 @@
+@use '../../sass/var';
+@use '../../sass/mixins';
+
 .features {
-    background-image: url('../../assets/images/ellipse-secondary.png');
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: contain;
-    &__ellipse {
-        position: absolute;
-        z-index: -1;
-        left: -5rem;
-        width: 25rem;
-        height: 25rem;
-        img { vertical-align: middle;}
+    
+    &__wrap {
+        height: 150rem;
     }
+    &__col {
+        flex-basis: 25%;
+        position: relative;
+        transform-origin: left;
+        margin: 0;
+        &:not(:first-child) {
+            border-left: 1px solid var.$color-dark;
+        }
+        @include mixins.respond(tab-port) {
+            &:not(:last-child) {
+                border-bottom: 1px solid var.$color-dark;
+                border-left: none;
+            }
+        }
+    }
+    &__container {
+        border-top: 1px solid var.$color-dark-2;
+        border-bottom: 1px solid rgba(var.$color-dark-2, .5);
+        position: sticky;
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        gap: 0;
+        @include mixins.respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+    &__card {
+        height: 43rem;
+        @include mixins.respond(tab-port) {
+            height: 100%;
+        }
+        &--icon {
+            width: 6.5rem;
+            height: 6.5rem;
+            border-radius: 50%;
+            border: 1px solid rgba(var.$color-primary, .25);
+            background-color: rgba(var.$color-dark-2, .2);
+            &--cta {
+                background-color: var.$color-dark;
+                border-color: var.$color-grey;
+            }
+            img {
+                vertical-align: middle;
+            }
+        }
+
+        &:first-child {
+            
+        }
+    }
+
 }

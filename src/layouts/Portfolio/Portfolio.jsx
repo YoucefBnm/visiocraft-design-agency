@@ -1,10 +1,10 @@
 import { useContext,  useRef } from 'react'
 import { PortfolioItems } from '../../constants'
-import './Showcase.scss'
+import './Portfolio.scss'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { CustomCursorContext } from '../../context/customCursor/customCursor.context'
 
-const Showcase = () => {
+const Portfolio = () => {
 
   const targetRef = useRef(null)
     const { scrollYProgress } = useScroll({
@@ -24,13 +24,13 @@ const Showcase = () => {
 
     const { setCursorOption } = useContext(CustomCursorContext)
 
-    const handleMouseEnter = () => setCursorOption('difference')
+    const handleMouseEnter = () => setCursorOption('project')
     const handleMouseLeave = () => setCursorOption('default')
   
   return (
-    <section id='portfolio' ref={targetRef} className='showcase pos--relative'>
+    <section id='portfolio' ref={targetRef} className='portfolio pos--relative'>
       <motion.div 
-        className='showcase__container'
+        className='portfolio__container'
         style={{ position }}
       >
         {
@@ -42,7 +42,7 @@ const Showcase = () => {
                 scale,
                 opacity
               }}
-              className='showcase__item' 
+              className='portfolio__item' 
               key={item.id}>
               {/* <img src={item.imageXl} alt={item.name} /> */}
               <picture>
@@ -54,17 +54,15 @@ const Showcase = () => {
           ))
         }
         <motion.div
-          className='showcase__text flex flex--col flex--center text--center gap--1rem'
+          className='portfolio__text flex flex--col flex--center text--center gap--1'
           style={{ opacity: textOpacity }}
         >
+          <h4 className="display display--xs">Explore our portfolio to witness the diversity and quality of projects we've undertaken. From sleek corporate websites to innovative e-commerce platforms, our work speaks for itself.</h4>
           <h2 className="display display--md">witness our work</h2>
-          <p className="text--sm text--center">Explore our portfolio to witness the diversity and quality of projects we've undertaken. From sleek corporate websites to innovative e-commerce platforms, our work speaks for itself.</p>
         </motion.div>
       </motion.div>
-
-      
     </section>
   )
 }
 
-export default Showcase
+export default Portfolio

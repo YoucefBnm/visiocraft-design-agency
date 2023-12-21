@@ -6,14 +6,14 @@ import { ProcessCard } from '../components'
 
 const Process = () => {
     const containerRef = useRef(null)
-    const { scrollYProgress } = useScroll({
+    const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ['start start', 'end end']
     })
 
   return (
     <main className="pad--x-default">
-        <div ref={containerRef} className="process__container flex flex--col gap--4 pos--relative overflow--hidden">
+        <div ref={containerRef} className="process__container mar--b-4 flex flex--col gap--4 pos--relative overflow--hidden">
             {
                 processPhases.map((phase, index) => (
                     <ProcessCard
@@ -25,16 +25,9 @@ const Process = () => {
             }
 
             <motion.div 
-                className='process__progress bg--success-dark' 
+                className='process__progress bg--success' 
                 style={{ 
                     scaleY: scrollYProgress,
-                    position: 'absolute',
-                    height: '100%',
-                    width: '.3rem',
-                    top: 0,
-                    left: 'calc(50% - .15rem)',
-                    transform: 'translateX(-50%)',
-                    transformOrigin: 'top',
                 }} 
             />
         </div>

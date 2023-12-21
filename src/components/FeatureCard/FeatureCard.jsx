@@ -1,13 +1,12 @@
-import './FeatureCard.scss'
 
 const FeatureCard = ({ icon, title, paragraph}) => {
   return (
-    <div className="featureCard pad--x-1 pad--y-4 flex flex--col flex--center gap--2 text--center">
-        <div className="featureCard__icon">
+    <div className="features__card pad--x-1 pad--y-4 flex flex--col flex--center gap--2 text--center bg--dark-3">
+        <div className="features__card--icon flex flex--center">
             <img src={icon} aria-hidden='true' />
         </div>
-        <h3 className="display display--sm">{title}</h3>
-        <p className='text--md'>{paragraph}</p>
+        <h4 className="display display--xs">{title}</h4>
+        <p className='text--sm'>{paragraph}</p>
     </div>
   )
 }

@@ -12,6 +12,11 @@ import CalculatorTotal from "./CalculatorTotal/CalculatorTotal";
 import FeatureCard from "./FeatureCard/FeatureCard";
 import CarouselItem from "./CarouselItem/CarouselItem";
 import ProcessCard from "./ProcessCard/ProcessCard";
+import UserForm from "./UserForm/UserForm";
+import UserInput from "./UserInput/UserInput";
+import UserTextarea from "./UserTextarea/UserTextarea";
+import UserTotalPrice from "./UserTotalPrice/UserTotalPrice";
+import Alert from "./Alert/Alert";
 
 export {
     CustomCursor,
@@ -26,5 +31,10 @@ export {
     CalculatorTotal,
     FeatureCard,
     CarouselItem,
-    ProcessCard
+    ProcessCard,
+    UserForm,
+    UserInput,
+    UserTextarea,
+    UserTotalPrice,
+    Alert
 }

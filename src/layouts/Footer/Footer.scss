@@ -1,0 +1,12 @@
+@use '../../sass/var';
+.footer {
+    border-top: 1px solid lighten($color: var.$color-dark, $amount: 20);
+
+    &__text {
+        width: 40ch;
+    }
+    &__copyright {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}

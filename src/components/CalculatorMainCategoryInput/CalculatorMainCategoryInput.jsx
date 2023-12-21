@@ -5,7 +5,7 @@ const CalculatorMainCategoryInput = ({ label, inputType, selectedLabel, handleCh
   return (
     <motion.div 
         className="calculatorInputItem input--main input--main pos--relative flex--inline flex--align-center flex--justify-center"
-        style={selectedLabel===label ? { backgroundColor: '#624dbe'} : { backgroundColor: 'transparent'}}
+        style={selectedLabel===label ? { backgroundColor: '#1D7874'} : { backgroundColor: 'transparent'}}
         whileHover={{ opacity: .8}}
     >
         <input 

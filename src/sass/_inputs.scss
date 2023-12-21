@@ -4,8 +4,8 @@
 .input {
     cursor: pointer;
     font: inherit;
-    &--form,
-    &--textarea {
+    &--user,
+    &--user--textarea {
         width: 100%;
         padding: 1rem 1.5rem;
         border-radius: 2px;
@@ -14,7 +14,7 @@
         transition: all .2s ease;
 
         &:focus {
-            outline: 2px ridge rgba(var.$color-accent, 0.70);
+            outline: 2px ridge rgba(var.$color-accent, 0.90);
         }
     }
     &--label {

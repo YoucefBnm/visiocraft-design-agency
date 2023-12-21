@@ -12,8 +12,8 @@ const ProcessCard = ({ phase, index }) => {
   return (
     <div className="processCard flex gap--4">
         
-        <div className="processCard__col processCard__col--sm">
-            <div className="processCard__step">
+        <div className="processCard__col processCard__col--sm bg--success">
+            <div className="processCard__step ">
                 <span>{step}</span>
             </div>
         </div>

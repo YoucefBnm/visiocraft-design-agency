@@ -1,0 +1,10 @@
+@use '../../sass/var';
+@use '../../sass/mixins';
+
+.formWrap {
+    background-color: darken($color: var.$color-dark-3, $amount: 20);
+
+    @include mixins.respond(phone) {
+        width: 38.334rem;
+    }
+}

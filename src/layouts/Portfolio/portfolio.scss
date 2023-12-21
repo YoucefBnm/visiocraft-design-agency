@@ -1,10 +1,10 @@
 @use '../../sass/var';
 @use '../../sass/mixins';
 
-.showcase {
+.portfolio {
     padding: 2rem;
-    background-image: url('../../assets/images/showcase-bg.png');
-    background-size: 100% 100%;
+    background-image: url('../../assets/images/ellipse-primary.png');
+    background-size: contain;
     background-repeat: no-repeat;
     height: 199rem;
     position: relative;

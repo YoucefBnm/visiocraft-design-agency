@@ -8,21 +8,24 @@ export const heroContent = {
 export const services = [
     {
         id: 'services-uiux',
-        icon: IconUiux,
-        title: 'UI/UX Design',
-        paragraph: "User experience (UX) and user interface (UI) design are pivotal in captivating and retaining your audience. Our UI/UX design services focus on creating intuitive interfaces and delightful user experiences. Through meticulous research and user testing, we design interfaces that not only look visually appealing but also function seamlessly, resulting in increased user engagement and satisfaction."
+        titleMain: 'ui/ux design',
+        titleSup: 'reflecting your unique story and values',
+        paragraph: 'User experience (UX) and user interface (UI) design are pivotal in captivating and retaining your audience. Our UI/UX design services focus on creating intuitive interfaces and delightful user experiences. Through meticulous research and user testing, we design interfaces that not only look visually appealing but also function seamlessly, resulting in increased user engagement and satisfaction.',
+        icon: IconUiux
     },
     {
-        id: 'services-web',
+        id: 'services-dev',
+        titleMain: 'web development',
+        titleSup: 'turning your vision into a functional experience',
+        paragraph: 'Our web development services are tailored to build responsive, user-friendly, and high-performing websites. Using the latest technologies and industry best practices, we create custom solutions that align perfectly with your business objectives. From dynamic landing pages to complex web applications, we turn your vision into a functional, seamless online experience.',
         icon: IconDev,
-        title: 'Web Development',
-        paragraph: "Our web development services are tailored to build responsive, user-friendly, and high-performing websites. Using the latest technologies and industry best practices, we create custom solutions that align perfectly with your business objectives. From dynamic landing pages to complex web applications, we turn your vision into a functional, seamless online experience."
     },
     {
         id: 'services-ecommerce',
-        icon: IconCard,
-        title: 'Ecommerce Solutions',
-        paragraph: "Unlock the potential of online sales with our e-commerce solutions. We specialize in developing robust and intuitive online stores that drive conversions. Our team integrates secure payment gateways, implements user-friendly interfaces, and optimizes for mobile responsiveness to ensure a smooth and enjoyable shopping experience for your customers."
+        titleMain: 'ecommerce solutions',
+        titleSup: 'ensuring enjoyable shopping experience',
+        paragraph: 'Our web development services are tailored to build responsive, user-friendly, and high-performing websites. Using the latest technologies and industry best practices, we create custom solutions that align perfectly with your business objectives. From dynamic landing pages to complex web applications, we turn your vision into a functional, seamless online experience.',
+        icon: IconCard
     }
 ]
 
@@ -181,20 +184,20 @@ export const featuresItems = {
         {
             id: 'features-experience',
             icon: IconExpertise,
-            title: 'Years of experience',
-            description: 'With years of experience, we blend creativity with cutting-edge technology to deliver exceptional results.',
+            title: 'Expertise',
+            description: 'we blend creativity with cutting-edge technology to deliver exceptional results.',
         },
         {
             id: 'features-solution',
             icon: IconSolution,
-            title: 'Tailored Solutions',
+            title: 'Customization',
             description: "We understand every business is unique; our solutions are custom-made to fit your specific needs.",
         },
         {
             id: 'features-approach',
             icon: IconApproach,
-            title: 'Collaborative Approach',
-            description: "We believe in partnership. Your input is invaluable, and we work closely with you throughout the process."
+            title: 'Partnership',
+            description: "We believe in partnership. Your input is invaluable, we work closely with you throughout the process."
         }
     ]
 }
@@ -340,5 +343,28 @@ export const processPhases = [
         titleMain: 'Post Launch Support',
         titleSub: "Nurturing Growth",
         paragraph: "Our commitment continues beyond launch. We offer post-launch support to address questions, provide assistance, and ensure your website remains updated and optimized. The Website Design Process isn't just about creating a website; it's about crafting a digital experience that resonates, engages, and converts. At [Your Agency Name], we navigate this journey with precision, creativity, and a dedication to excellence. Ready to embark on your website design journey? Let's bring your digital vision to life."
+    }
+]
+
+export const footerLinks = [
+    {
+        id: 'footer-link-linkedin',
+        name: 'Linkedin',
+        link: 'https://www.linkedin.com/in/youcef-bnm-692392123/',
+    },
+    {
+        id: 'footer-link-twitter',
+        name: 'Xtwitter',
+        link: '',
+    },
+    {
+        id: 'footer-link-github',
+        name: 'Github',
+        link: 'https://github.com/YoucefBnm',
+    },
+    {
+        id: 'footer-link-dribbble',
+        name: 'Dribbble',
+        link: '',
     }
 ]

@@ -1,19 +1,6 @@
-<svg width="71" height="70" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" width="69.9999" height="70.0008" rx="34.9999" fill="url(#paint0_linear_222_383)"/>
-<rect x="1" y="0.5" width="68.9999" height="69.0008" rx="34.4999" stroke="#8635EE" stroke-opacity="0.5"/>
-<path d="M27.4219 26.9229H41.2682C42.5428 26.9229 43.5759 27.9561 43.5759 29.2306V43.077H29.7296C28.4551 43.077 27.4219 42.0438 27.4219 40.7693V26.9229Z" fill="url(#paint1_linear_222_383)"/>
-<path d="M34.3467 26.9233H41.2698C41.8819 26.9233 42.4689 27.1665 42.9016 27.5993C43.3343 28.032 43.5776 28.619 43.5776 29.2311V36.1543" stroke="#BFBFBF" stroke-width="2.30773" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M27.4229 20V40.7696C27.4229 41.3817 27.666 41.9687 28.0988 42.4015C28.5315 42.8342 29.1185 43.0774 29.7306 43.0774H50.5001" stroke="#BFBFBF" stroke-width="2.30773" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M27.4232 26.9233H20.5" stroke="#BFBFBF" stroke-width="2.30773" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M43.5781 43.0776V50.0009" stroke="#BFBFBF" stroke-width="2.30773" stroke-linecap="round" stroke-linejoin="round"/>
-<defs>
-<linearGradient id="paint0_linear_222_383" x1="35.4999" y1="0" x2="35.4999" y2="70.0008" gradientUnits="userSpaceOnUse">
-<stop stop-color="#BF94F6" stop-opacity="0"/>
-<stop offset="1" stop-color="#BF94F6" stop-opacity="0.3"/>
-</linearGradient>
-<linearGradient id="paint1_linear_222_383" x1="35.4989" y1="26.9229" x2="35.4989" y2="43.077" gradientUnits="userSpaceOnUse">
-<stop stop-color="#BF94F6" stop-opacity="0"/>
-<stop offset="1" stop-color="#BF94F6" stop-opacity="0.3"/>
-</linearGradient>
-</defs>
+<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5586 8.29932H22.5878C23.2093 8.29932 23.8053 8.54618 24.2446 8.98558C24.6839 9.425 24.9309 10.021 24.9309 10.6424V17.6716" stroke="#EDF2EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.5293 1.27002V22.3577C8.5293 22.9791 8.77616 23.5752 9.21556 24.0145C9.65498 24.4538 10.2509 24.7008 10.8724 24.7008H31.9601" stroke="#EDF2EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.52923 8.29932H1.5" stroke="#EDF2EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.9307 24.7007V31.7299" stroke="#EDF2EF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

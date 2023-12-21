@@ -21,10 +21,7 @@ const CalculatorWrap = () => {
 
   return (
     <div 
-      style={{
-
-      }}
-      className="calculatorWrap pad--y-4 pad--x-4 bg--dark flex flex--col gap--2"
+      className="calculatorWrap pad--y-4 pad--x-2 flex flex--col gap--2"
     >
       <div className="flex flex--align-center flex--justify-start gap--1 flex--wrap">
         {

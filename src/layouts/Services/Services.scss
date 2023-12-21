@@ -4,45 +4,29 @@
 .services {
     &__wrap {
         position: relative;
-        height: 550vh;
+        height: 350rem;
     }
     &__container {
+        .display--md {
+            width: 25ch;
+        }
         position: sticky;
         width: 100%;
         top: 0;
         overflow: hidden;
-        min-height: 100vh;
-        background-image: url('../../assets/images/ellipse-dark.png');
+        height: clamp(100vh, 58rem, 60rem);
+        background-color: darken(var.$color-accent, 50%);
+        border-radius: 2rem;
         background-size: contain;
-        background-repeat: no-repeat;
-        background-position: left;
-        // height: 50rem;
+        margin-top: 5rem;
         @include mixins.respond(phone) {
             // min-height: 60rem;
         }
     }
-    &__bg {
-        position: sticky;
-        
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: transparent;
-        img {
-            position: absolute;
-            vertical-align: middle;
-            &:first-child {
-                right: -14rem;
-            }
-            &:nth-child(2) {
-                left: -15rem;
-            }
-        }
-    }
+    
     &__icon {
         padding: 4rem;
         position: absolute;
-        top: 20%;
         left: auto;
         img {
             vertical-align: middle;
@@ -57,12 +41,11 @@
     &__card {
         padding: 4rem;
         position: absolute;
-        top: 20%;
         right: 2rem;
         max-width: 70%;
         border-radius: 20px;
-        border: 1px solid rgba(191, 148, 246, 0.20);
-        background: linear-gradient(159deg, rgba(225, 202, 255, 0.05) 12.1%, rgba(56, 48, 227, 0.05) 86.3%), rgba(0, 0, 0, 0.20);
+        border: 1px solid rgba(var.$color-grey, 0.20);
+        background: var.$color-dark-2;
 
         @include mixins.respond(tab-port) {
             padding: 2.5rem;
