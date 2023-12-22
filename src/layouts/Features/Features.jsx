@@ -24,8 +24,8 @@ const Features = () => {
     const MotionLink = motion(Link)
     
   return (
-    <section id="why-us" className="features pos--relative flex flex--col gap--4">
-        <StaggerContainer  style='flex flex--col flex--center text--center width--75 mar--x-auto gap--2 pos--relative'>
+    <section id="why-us" className="features pos--relative">
+        <StaggerContainer  style='flex flex--col flex--center text--center width--75 mar--x-auto pad--y-4 gap--2 pos--relative'>
             <motion.h4 variants={fadeVariants('bottom')} className='display display--xs'>{lead}</motion.h4>
             <motion.h2 variants={fadeVariants('bottom')} className='display display--md'>{heading}</motion.h2>
             <MotionLink to='/process' variants={fadeVariants('bottom')}>
@@ -59,7 +59,7 @@ const Features = () => {
                         x: x(items.length)
                     }}
                 >
-                    <div className="features__card features__card--cta flex flex--col flex--center gap--2">
+                    <div className="features__card features__card--cta flex flex--col flex--center gap--2 pad--y-4">
                         <div className="features__card--icon flex flex--center">
                             <img src={IconRocket} aria-hidden='true' />
                         </div>

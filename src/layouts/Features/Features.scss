@@ -35,6 +35,9 @@
     }
     &__card {
         min-height: 43rem;
+        @include mixins.respond(tab-port) {
+            min-height: 100%;
+        }
         &--cta {
             background-color: darken($color: var.$color-primary, $amount: 60);
         }
