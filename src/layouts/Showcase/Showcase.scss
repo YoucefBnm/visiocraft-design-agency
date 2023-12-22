@@ -1,4 +1,4 @@
-.carousel {
+.showcase {
     position: relative;
     height: 200rem;
     &__container {
@@ -14,10 +14,5 @@
         img {
             vertical-align: middle;
         }
-    }
-    &__row {
-    }
-    &__item {
-
     }
 }

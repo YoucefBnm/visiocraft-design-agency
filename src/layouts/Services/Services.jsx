@@ -1,21 +1,16 @@
 import { ServiceRow, StaggerContainer } from "../../components"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion,  useTransform } from "framer-motion"
 import { fadeVariants } from "../../libs/motion/motion.variants"
-import { useRef } from "react"
 import { services } from "../../constants"
 
 import './Services.scss'
-import { EllipseBlur1, EllipseBlur2 } from "../../assets"
+import { useScrollAnimation } from "../../hooks/useScrollAnimation"
 
 const Services = () => {
-  const targetRef = useRef(null)
+  const { targetRef, scrollYProgress } = useScrollAnimation()
 
-  const { scrollYProgress } = useScroll({
-    target: targetRef
-  })
   const x1 = useTransform(scrollYProgress, [.2,.45], [0, -700])
   const x1Reverse = useTransform(scrollYProgress, [.2,.45], [0, 900])
-  const opacity1 = useTransform(scrollYProgress, [.4, .45], [1, 0])
   
   const x2 = useTransform(scrollYProgress, [.35, .55, .85], [-700, 0, -700])
   const x2Reverse = useTransform(scrollYProgress, [.35,.55,.85], [900, 0, 900])

@@ -1,18 +1,18 @@
 import { CalculatorWrap, StaggerContainer } from '../../components'
 import { motion } from 'framer-motion'
 
-import './Calculation.scss'
+import './Pricing.scss'
 import { fadeVariants } from '../../libs/motion/motion.variants'
 import { calculateSecionText } from '../../constants'
-import { UserFormWrap } from '../'
+import { UserFormWrap } from '..'
 
-const Calculation = () => {
+const Pricing = () => {
   const { heading, paragraph } = calculateSecionText
 
   return (
-    <section id='pricing' className="calculation pad--y-default pad--x-default">
+    <section id='pricing' className="pricing pad--y-default pad--x-default">
      
-     <div className="calculation__container flex flex--col flex--center text--center gap--2">
+     <div className="pricing__container flex flex--col flex--center text--center gap--2">
       <StaggerContainer style='flex flex--col gap--2 flex--center'>
       <motion.h4 className='display display--xs' variants={fadeVariants('bottom')}>
           {paragraph}
@@ -23,7 +23,7 @@ const Calculation = () => {
         </motion.h2>
       </StaggerContainer>
 
-      <div className="flex calculation__wrap">
+      <div className="flex pricing__wrap">
         <CalculatorWrap />
         <UserFormWrap />
       </div>
@@ -34,4 +34,4 @@ const Calculation = () => {
   )
 }
 
-export default Calculation
+export default Pricing

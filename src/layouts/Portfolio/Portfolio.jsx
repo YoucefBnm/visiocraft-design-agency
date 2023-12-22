@@ -1,18 +1,13 @@
-import { useContext,  useRef } from 'react'
+import { useContext } from 'react'
 import { PortfolioItems } from '../../constants'
 import './Portfolio.scss'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useTransform } from 'framer-motion'
 import { CustomCursorContext } from '../../context/customCursor/customCursor.context'
+import { useScrollAnimation } from '../../hooks/useScrollAnimation'
 
 const Portfolio = () => {
 
-  const targetRef = useRef(null)
-    const { scrollYProgress } = useScroll({
-        target: targetRef,
-        // offset: ['start end', 'end start']
-    })
-
-    const { current } = targetRef
+    const { targetRef, scrollYProgress } = useScrollAnimation()
 
     const opacity = useTransform(scrollYProgress, [0, .4], [.5, 1])
     const scale = useTransform(scrollYProgress, [0, .4], [.25, 1])

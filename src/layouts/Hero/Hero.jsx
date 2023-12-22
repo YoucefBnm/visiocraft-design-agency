@@ -3,10 +3,8 @@ import { StaggerContainer } from '../../components'
 import { fadeVariants } from '../../libs/motion/motion.variants'
 import './Hero.scss'
 import { heroContent } from '../../constants'
-import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { CustomCursorContext } from '../../context/customCursor/customCursor.context'
-import { useSetAnimation } from '../../hooks/useSetAnimation'
 
 const Hero = () => {
 
@@ -16,10 +14,8 @@ const Hero = () => {
   const handleMouseEnter = () => setCursorOption('difference')
   const handleMouseLeave = () => setCursorOption('default')
 
-  const {targetRef, bottom} = useSetAnimation([0,.4, .7, 1], [0,1000,3000, 5000])
-
   return (
-   <section id='home' ref={targetRef} className="hero pos--relative flex pad--x-default pad--y-4">
+   <section id='home' className="hero pos--relative flex pad--x-default pad--y-4">
 
     <StaggerContainer direction={-1} style='hero__wrap overflow--hidden pos--relative'>
       {
@@ -43,7 +39,6 @@ const Hero = () => {
         {paragraph}
       </motion.p>
     </StaggerContainer>
-    
    </section>
   )
 }

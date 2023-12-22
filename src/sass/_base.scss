@@ -16,8 +16,8 @@ html {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   color-scheme: dark;
+  // scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
 body {

@@ -1,0 +1,19 @@
+@use '../../sass/var';
+@use '../../sass/mixins';
+
+.pricing {
+    overflow: hidden;
+    position: relative;
+
+    &__wrap {
+        border-radius: 1rem;
+        background-color: var.$color-dark;
+        overflow: hidden;
+
+        @include mixins.respond(tab-port) {
+        }
+        @include mixins.respond(phone) {
+            flex-wrap: wrap;
+        }
+    }
+}

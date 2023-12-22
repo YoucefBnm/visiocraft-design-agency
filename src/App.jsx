@@ -3,7 +3,6 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { Contact, Home, Process } from './routes';
 import { Footer, Nav } from './layouts';
 import { CustomCursorProvider } from './context/customCursor/customCursor.context';
-import { Fragment } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { CustomCursor } from './components';
 

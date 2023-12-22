@@ -1,7 +1,7 @@
 import { CalculatorProvider } from '../context/calculator/calculator.context'
 import Transition from '../hoc/Transition'
 
-import { About, Calculation, Carousel, Features, Hero, Portfolio, Services } from '../layouts'
+import { Pricing, Features, Hero, Portfolio, Services, Showcase } from '../layouts'
 import { useSetPageTitle } from '../hooks/useSetPageTitle'
 
 const Home = () => {
@@ -10,14 +10,13 @@ const Home = () => {
   return (
     <>
         <Hero />
-        <Carousel />
+        <Showcase />
         <Services />
-        <About />
         <Features />
         <Portfolio /> 
 
         <CalculatorProvider>
-          <Calculation />
+          <Pricing />
         </CalculatorProvider>
 
         

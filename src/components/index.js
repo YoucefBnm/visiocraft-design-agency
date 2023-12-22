@@ -1,5 +1,4 @@
 import CustomCursor from "./CustomCursor/CustomCursor";
-import Pattern from "./Pattern/Pattern";
 import StaggerContainer from "./StaggerContainer/StaggerContainer";
 import CtaBtn from "./CtaBtn/CtaBtn";
 import ServiceRow from "./ServiceRow/ServiceRow";
@@ -20,7 +19,6 @@ import Alert from "./Alert/Alert";
 
 export {
     CustomCursor,
-    Pattern,
     StaggerContainer,
     CtaBtn,
     ServiceRow,

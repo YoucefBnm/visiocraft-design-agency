@@ -1,23 +1,21 @@
-import About from "./About/About";
-import Calculation from "./Calculation/Calculation";
+import Pricing from "./Pricing/Pricing";
 import Footer from "./Footer/Footer";
 import Hero from "./Hero/Hero";
 import Nav from "./Nav/Nav";
 import Services from "./Services/Services";
 import Portfolio from "./Portfolio/Portfolio";
 import Features from "./Features/Features";
-import Carousel from "./Crousel/Carousel";
+import Showcase from "./Showcase/Showcase";
 import UserFormWrap from "./UserFormWrap/UserFormWrap";
 
 export {
-    About,
-    Calculation,
+    Pricing,
     Footer,
     Hero,
     Nav,
     Services,
     Portfolio,
     Features,
-    Carousel,
+    Showcase,
     UserFormWrap,
 }
