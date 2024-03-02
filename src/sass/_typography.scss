@@ -1,0 +1,144 @@
+@use "./var";
+
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2;
+}
+.font-body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.h {
+  @extend .font-heading;
+  text-transform: capitalize;
+
+  &--1 {
+    font-size: 8rem;
+  }
+  &--2 {
+    font-size: 6.4rem;
+  }
+  &--3 {
+    font-size: 4.8rem;
+  }
+  &--4 {
+    font-size: 3.2rem;
+  }
+  &--5 {
+    font-size: 1.6rem;
+  }
+}
+
+.text {
+  &--base {
+    font-size: 1.8rem;
+  }
+  &--sm {
+    font-size: 1.6rem;
+  }
+  &--xs {
+    font-size: 1.4rem;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--lowercase {
+    text-transform: lowercase;
+  }
+}
+
+.bg {
+  &--light {
+    background-color: var.$color-light;
+  }
+  &--dark {
+    background-color: var.$color-dark;
+  }
+  &--dark-1 {
+    background-color: var.$color-dark-1;
+  }
+  &--dark-2 {
+    background-color: var.$color-dark-2;
+  }
+  &--dark-3 {
+    background-color: var.$color-dark-3;
+  }
+  &--dark-4 {
+    background-color: var.$color-dark-4;
+  }
+  &--dark-5 {
+    background-color: var.$color-dark-5;
+  }
+
+  &--primary {
+    background-color: var.$color-primary;
+  }
+  &--primary-2 {
+    background-color: var.$color-primary-2;
+  }
+  &--primary-3 {
+    background-color: var.$color-primary-3;
+  }
+  &--primary-4 {
+    background-color: var.$color-primary-4;
+  }
+  &--primary-5 {
+    background-color: var.$color-primary-5;
+  }
+}
+
+.text {
+  &--white {
+    color: #ffffff;
+  }
+  &--light {
+    color: var.$color-light;
+  }
+  &--dark {
+    color: var.$color-dark;
+  }
+  &--dark-1 {
+    color: var.$color-dark-1;
+  }
+  &--dark-2 {
+    color: var.$color-dark-2;
+  }
+  &--dark-3 {
+    color: var.$color-dark-3;
+  }
+  &--dark-4 {
+    color: var.$color-dark-4;
+  }
+  &--dark-5 {
+    color: var.$color-dark-5;
+  }
+
+  &--primary {
+    color: var.$color-primary;
+  }
+  &--primary-2 {
+    color: var.$color-primary-2;
+  }
+  &--primary-3 {
+    color: var.$color-primary-3;
+  }
+  &--primary-4 {
+    color: var.$color-primary-4;
+  }
+  &--primary-5 {
+    color: var.$color-primary-5;
+  }
+}

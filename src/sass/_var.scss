@@ -1,0 +1,15 @@
+$color-light: #ffeedb;
+$color-dark: #08090d;
+$color-dark-1: lighten($color-dark, 10%);
+$color-dark-2: lighten($color-dark, 20%);
+$color-dark-3: lighten($color-dark, 30%);
+$color-dark-4: lighten($color-dark, 40%);
+$color-dark-5: lighten($color-dark, 50%);
+$color-primary: #05299e;
+$color-primary-1: lighten($color-primary, 10%);
+$color-primary-2: lighten($color-primary, 20%);
+$color-primary-3: lighten($color-primary, 30%);
+$color-primary-4: lighten($color-primary, 40%);
+$color-primary-5: lighten($color-primary, 80%);
+
+$linear-text: linear-gradient(to right, $color-primary-4, $color-primary-2);

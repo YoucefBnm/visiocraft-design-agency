@@ -1,0 +1,243 @@
+@use "./mixins";
+.pad {
+  &--x-lg {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    @include mixins.respond(tab-port) {
+      padding-left: 3.2rem;
+      padding-right: 3.2rem;
+    }
+    @include mixins.respond(phone) {
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
+  }
+  &--x-md {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+    @include mixins.respond(phone) {
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
+  }
+  &--x-sm {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  &--x-xs {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  &--l-lg {
+    padding-left: 4.8rem;
+  }
+  &--l-md {
+    padding-left: 3.2rem;
+  }
+  &--l-sm {
+    padding-left: 1.6rem;
+  }
+  &--l-xs {
+    padding-right: 0.8rem;
+  }
+
+  &--r-lg {
+    padding-right: 4.8rem;
+  }
+  &--r-md {
+    padding-right: 3.2rem;
+  }
+  &--r-sm {
+    padding-right: 1.6rem;
+  }
+  &--r-xs {
+    padding-left: 0.8rem;
+  }
+
+  &--y-lg {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  &--y-md {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+  &--y-sm {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+  &--y-xs {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+  &--y-1 {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+  &--y-05 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+.mar {
+  &--x-lg {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+  }
+  &--x-md {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+  &--x-sm {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  &--x-xs {
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+  }
+
+  &--l-lg {
+    padding-left: 4.8rem;
+  }
+  &--l-md {
+    padding-left: 3.2rem;
+  }
+  &--l-sm {
+    padding-left: 1.6rem;
+  }
+  &--l-xs {
+    padding-right: 0.8rem;
+  }
+
+  &--r-lg {
+    padding-right: 4.8rem;
+  }
+  &--r-md {
+    padding-right: 3.2rem;
+  }
+  &--r-sm {
+    padding-right: 1.6rem;
+  }
+  &--r-xs {
+    padding-left: 0.8rem;
+  }
+
+  &--y-lg {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+  &--y-md {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+  &--y-sm {
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+  }
+  &--y-xs {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+  &--y-1 {
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+  &--y-05 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+.gap {
+  &--x-1 {
+    row-gap: 0.8rem;
+  }
+  &--x-2 {
+    row-gap: 1.6rem;
+  }
+  &--x-3 {
+    row-gap: 2.4rem;
+  }
+  &--x-4 {
+    row-gap: 3.2rem;
+  }
+
+  &--y-1 {
+    column-gap: 0.8rem;
+  }
+  &--y-2 {
+    column-gap: 1.6rem;
+  }
+  &--y-3 {
+    column-gap: 2.4rem;
+  }
+  &--y-4 {
+    column-gap: 3.2rem;
+  }
+}
+.overflow {
+  &--hidden {
+    overflow: hidden;
+  }
+  &--visible {
+    overflow: visible;
+  }
+}
+
+.border {
+  &--1 {
+    border: 0.8rem solid;
+  }
+  &--2 {
+    border: 1.6rem solid;
+  }
+  &--3 {
+    border: 2.4rem solid;
+  }
+
+  &--rad-1 {
+    border-radius: 0.8rem;
+  }
+  &--rad-2 {
+    border-radius: 1.6rem;
+  }
+  &--rad-3 {
+    border-radius: 2.4rem;
+  }
+  &--rad-4 {
+    border-radius: 3.2rem;
+  }
+  &--rad-full {
+    border-radius: 9999px;
+  }
+}
+
+.z {
+  &--minus {
+    z-index: -2;
+  }
+  &--2 {
+    z-index: 2;
+  }
+  &--full {
+    z-index: 99;
+  }
+}
+
+.opacity {
+  &--05 {
+    opacity: 0.05;
+  }
+  &--2 {
+    opacity: 0.2;
+  }
+  &--5 {
+    opacity: 0.5;
+  }
+  &--7 {
+    opacity: 0.7;
+  }
+}
