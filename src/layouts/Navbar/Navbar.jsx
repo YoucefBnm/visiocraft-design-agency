@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Logo } from "../../assets";
 import Button from "../../components/Button/Button";
+import LogoImage from "../../components/Logoimage/LogoImage";
 
 const Navbar = () => {
   return (
@@ -10,7 +10,7 @@ const Navbar = () => {
         className="navbar__logo flex flex--center"
         aria-label="navigate home"
       >
-        <img width="69" height="35" className="vetical--middle " src={Logo} />
+        <LogoImage />
       </Link>
 
       <Button type="button" variant={"bg"}>

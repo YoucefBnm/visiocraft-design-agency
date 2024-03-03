@@ -10,10 +10,7 @@ const Pricing = () => {
   const { heading, lead, paragraph } = pricingSectionText;
 
   return (
-    <section
-      id="pricing"
-      className="pad--x-lg pad--y-lg mar--y-lg overflow--hidden"
-    >
+    <section id="pricing" className="pad--x-lg  mar--y-lg overflow--hidden">
       <StaggerContainer className={"pricing__container"}>
         <StaggerContainer
           direction={-1}

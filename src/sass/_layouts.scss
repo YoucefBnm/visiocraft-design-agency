@@ -35,6 +35,9 @@
   &--align-end {
     align-items: flex-end;
   }
+  &--wrap {
+    flex-wrap: wrap;
+  }
 }
 
 .block {
