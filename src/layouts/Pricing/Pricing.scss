@@ -1,0 +1,23 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.pricing {
+  &__container {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 4.8rem;
+    align-items: start;
+    @include mixins.respond(tab-port) {
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: 1fr;
+    }
+  }
+  &__form {
+    border-radius: 1.6rem;
+    background-color: rgba(var.$color-dark-1, 0.5);
+    border: var.$form-border;
+    // width: 75%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}

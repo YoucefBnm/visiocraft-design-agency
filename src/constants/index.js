@@ -9,8 +9,8 @@ export const aboutContent = {
     "At VISIOCRAFT, We understand that your website is the digital face of your business. Our passion lies in transforming your vision into a visually stunning and highly functional website that not only captures the essence of your brand but also engages your audience effectively.",
 };
 
-export const calculateSecionText = {
-  lead: "Starting from $700",
+export const pricingSectionText = {
+  lead: "See What your website needs",
   heading: "Our Pricing",
   paragraph:
     "Starting from 650$, our design services are for everyone from small, mid-size to large businisses.",
@@ -20,12 +20,12 @@ export const pricing = {
   mainCategories: [
     {
       id: "price-main-new_website",
-      title: "New Website",
+      title: "new website",
       price: 500,
     },
     {
       id: "price-main-redesign",
-      title: "Redesign Website",
+      title: "redesign website",
       price: 400,
     },
   ],

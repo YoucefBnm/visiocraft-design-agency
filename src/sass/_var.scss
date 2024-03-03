@@ -1,15 +1,28 @@
-$color-light: #ffeedb;
-$color-dark: #08090d;
-$color-dark-1: lighten($color-dark, 10%);
-$color-dark-2: lighten($color-dark, 20%);
-$color-dark-3: lighten($color-dark, 30%);
-$color-dark-4: lighten($color-dark, 40%);
+$color-light: #aeac95;
+$color-dark: #121420;
+$color-dark-1: #1b2432;
+$color-dark-2: #2c2b3c;
+$color-dark-3: lighten($color-dark, 22%);
+$color-dark-4: lighten($color-dark, 32%);
 $color-dark-5: lighten($color-dark, 50%);
-$color-primary: #05299e;
-$color-primary-1: lighten($color-primary, 10%);
-$color-primary-2: lighten($color-primary, 20%);
-$color-primary-3: lighten($color-primary, 30%);
-$color-primary-4: lighten($color-primary, 40%);
-$color-primary-5: lighten($color-primary, 80%);
-
+$color-primary: #df2935;
+$color-primary-1: lighten($color-primary, 5%);
+$color-primary-2: lighten($color-primary, 10%);
+$color-primary-3: lighten($color-primary, 18%);
+$color-primary-4: lighten($color-primary, 24%);
+$color-primary-5: lighten($color-primary, 34%);
+$color-purple: #3423a6;
+$color-green: #129490;
 $linear-text: linear-gradient(to right, $color-primary-4, $color-primary-2);
+$input-border: 1px solid rgba($color-primary, 0.5);
+$input-bg: rgba($color-primary, 0.2);
+$input-handle-shadow: inset 1px 2px 4px $color-dark;
+
+$btn-linear: linear-gradient(-45deg, $color-dark 0%, $color-primary 100%);
+$btn-linear-reverse: linear-gradient(
+  -45deg,
+  $color-primary 0%,
+  $color-dark 100%
+);
+
+$form-border: 1px solid rgba($color-dark-2, 0.8);

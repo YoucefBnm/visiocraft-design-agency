@@ -1,0 +1,123 @@
+@use "./var";
+
+.input {
+  cursor: pointer;
+  &--main {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    &--check {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: inline-flex;
+      padding-left: 0.4rem;
+      align-items: center;
+    }
+  }
+
+  &--range {
+    appearance: none;
+    height: 1.6rem;
+    width: 100%;
+    background: var.$input-bg;
+    cursor: pointer;
+    border-radius: 1.6rem;
+
+    &::-webkit-slider-runnable-track {
+      height: 100%;
+      border-radius: 2rem;
+      border: var.$input-border;
+    }
+    &::-webkit-slider-thumb {
+      width: 2rem;
+      cursor: e-resize;
+      height: 2rem;
+      position: relative;
+      border-radius: 50%;
+      appearance: none;
+      background-color: var.$color-dark-5;
+      box-shadow: var.$input-handle-shadow;
+      top: 50%;
+      translate: 0 -50%;
+      z-index: 2;
+    }
+  }
+  &--progress {
+    top: calc(50% - 0.2rem);
+    left: 0.2rem;
+    translate: 0 -50%;
+    height: 1.4rem;
+    border-radius: 2rem;
+    // border: var.$input-border;
+    max-width: 97%;
+    box-shadow: var.$input-handle-shadow;
+    background: linear-gradient(
+      to right,
+      var.$color-primary-3,
+      var.$color-primary
+    );
+  }
+
+  &--switch {
+    border: var.$input-border;
+    background-color: var.$input-bg;
+    height: 2.4rem;
+    width: 4.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 0 0.2rem;
+    input {
+      appearance: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+  &--handle {
+    border-radius: 50%;
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    box-shadow: var.$input-handle-shadow;
+  }
+
+  &--user,
+  &--textarea {
+    appearance: none;
+    font: inherit;
+    background: none;
+    border: none;
+    width: 100%;
+    padding: 0.8rem 1.6rem;
+    border: var.$input-border;
+    border-radius: 2rem;
+    transition: outline 0.2s ease;
+
+    &:focus {
+      outline: 1px ridge var.$color-primary;
+    }
+  }
+  &--user {
+    border-radius: 5rem;
+  }
+  &--textarea {
+  }
+}
+
+label {
+  text-wrap: nowrap;
+}
