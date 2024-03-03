@@ -52,8 +52,8 @@ const UserTextarea = ({ value, handleChange }) => {
       name="message"
       value={value}
       id="message"
-      cols="30"
-      rows="10"
+      cols="20"
+      rows="7"
       placeholder="your message..."
       className="input--textarea"
       onChange={handleChange}
@@ -77,7 +77,7 @@ const FormWrap = () => {
   return (
     <form
       onSubmit={handleFormSubmit}
-      className="formWrap flex flex--col flex--center gap--x-2 flex--align-start pad--x-md width--100"
+      className="formWrap flex flex--col  gap--x-2 pad--y-md flex--align-start pad--x-md width--100"
       ref={formRef}
     >
       <UserTotalPrice />
@@ -96,8 +96,13 @@ const FormWrap = () => {
 
       <UserTextarea value={message} handleChange={handleFormFieldChange} />
 
-      <Button variant={"bg"} type={"submit"}>
-        Send
+      <Button
+        variant={"bg"}
+        type={"submit"}
+        disabled={loading}
+        aria-label="send email"
+      >
+        {loading ? "Sending" : "Send"}
       </Button>
       {show && <Alert type={type} text={text} />}
     </form>

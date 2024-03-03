@@ -1,0 +1,25 @@
+@use "../../sass/mixins";
+
+.about {
+  height: 350rem;
+  &__container {
+    position: sticky;
+    min-height: 100svh;
+    top: 0;
+    @include mixins.respond(phone) {
+      width: 95% !important;
+    }
+    .h {
+      line-height: 1.5;
+    }
+    div {
+      .h {
+      }
+    }
+  }
+  &__ellipse {
+    position: absolute;
+    top: -50%;
+    right: -100%;
+  }
+}

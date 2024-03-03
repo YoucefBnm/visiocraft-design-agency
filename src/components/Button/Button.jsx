@@ -1,12 +1,12 @@
 import "./Button.scss";
 
-const Button = ({ type, handleClick, variant, children }) => {
+const Button = ({ variant, children, handleClick, ...otherProps }) => {
   return (
     <button
-      type={type}
       role="button"
       onClick={handleClick}
       className={`btn btn--${variant} font-heading`}
+      {...otherProps}
     >
       {children}
     </button>
