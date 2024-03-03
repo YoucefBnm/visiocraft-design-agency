@@ -29,3 +29,9 @@ body {
   background-color: var.$color-dark;
   @extend .font-body;
 }
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}

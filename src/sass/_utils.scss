@@ -114,6 +114,14 @@
     margin-bottom: 1.6rem;
     margin-top: 1.6rem;
   }
+  &--y-1 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  &--y-05 {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
   &--l-lg {
     margin-left: 4.8rem;
   }
@@ -272,5 +280,26 @@
 .pointer-events {
   &--none {
     pointer-events: none;
+  }
+}
+
+.vertical {
+  &--middle {
+    vertical-align: middle;
+  }
+}
+
+.backdrop {
+  &--1 {
+    backdrop-filter: blur(10px);
+  }
+  &--2 {
+    backdrop-filter: blur(20px);
+  }
+}
+
+.bg-clip {
+  &--box {
+    background-clip: content-box;
   }
 }
