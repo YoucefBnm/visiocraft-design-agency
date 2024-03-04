@@ -1,3 +1,14 @@
+import {
+  ServicesDevIcon,
+  ServicesDevImage,
+  ServicesEcommerceIcon,
+  ServicesEcommerceImage,
+  ServicesMobileIcon,
+  ServicesMobileImage,
+  ServicesUiuxIcon,
+  ServicesUiuxImage,
+} from "../assets";
+
 export const heroContent = {
   headings: ["where vision meets", "craftsmanship in web", "design"],
   paragraph:
@@ -241,5 +252,44 @@ export const footerLinks = [
     id: "footer-link-dribbble",
     name: "Dribbble",
     link: "",
+  },
+];
+
+export const services = [
+  {
+    id: "services-uiux-design",
+    mainTitle: "UI/UX design",
+    subTitle: "reflection your unique story",
+    paragraph:
+      "User experience (UX) and user interface (UI) design are pivotal in captivating and retaining your audience. Our UI/UX design services focus on creating intuitive interfaces and delightful user experiences.",
+    image: ServicesUiuxImage,
+    icon: ServicesUiuxIcon,
+  },
+  {
+    id: "services-ecommerce",
+    mainTitle: "e commerce",
+    subTitle: "ensuring enjoyable shopping experience",
+    paragraph:
+      "Maximize your online potential with our e-commerce expertise. From user-friendly interfaces to secure payment gateways, we provide end-to-end solutions for your online store.",
+    image: ServicesEcommerceImage,
+    icon: ServicesEcommerceIcon,
+  },
+  {
+    id: "services-dev",
+    mainTitle: "development",
+    subTitle: "Turning your vision into a functional experience",
+    paragraph:
+      "Our web development services are tailored to build responsive, user-friendly, and high-performing websites. Using the latest technologies and industry best practices, we create custom solutions that align perfectly with your business objectives.",
+    image: ServicesDevImage,
+    icon: ServicesDevIcon,
+  },
+  {
+    id: "services-responsive",
+    mainTitle: "responsive design",
+    subTitle: "Adapting to mobile centric world",
+    paragraph:
+      "In a mobile-centric world, your website needs to adapt. We ensure that your site is not just responsive but optimized for various devices, delivering a consistent user experience.",
+    image: ServicesMobileImage,
+    icon: ServicesMobileIcon,
   },
 ];

@@ -1,0 +1,13 @@
+<svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.30762 22.6104L11.1538 17.9971H14.8461L16.6922 22.6104H9.30762Z" fill="#D7E0FF" fill-opacity="0.6"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.92308 1.38916H13.9231V10.6158L16.1569 8.77046C16.819 8.22288 17.6514 7.92327 18.5108 7.92327C19.3702 7.92327 20.2026 8.22288 20.8646 8.77046L25 12.4611V17.0744C25 17.5839 24.5866 17.9971 24.0769 17.9971H1.92308C1.41328 17.9971 1 17.5839 1 17.0744V2.31182C1 1.80225 1.41328 1.38916 1.92308 1.38916Z" fill="#DF2935" fill-opacity="0.2"/>
+<path d="M24.9998 2.31182C24.9998 1.80225 24.5864 1.38916 24.0767 1.38916H13.9229V10.6158L16.1567 8.77046C16.8188 8.22288 17.6512 7.92327 18.5105 7.92327C19.3699 7.92327 20.2024 8.22288 20.8644 8.77046L24.9998 12.4611V2.31182Z" fill="#DF2935" fill-opacity="0.2"/>
+<path d="M11.1538 17.9971L9.30762 22.6104" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.8462 17.9971L16.6923 22.6104" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.46143 22.6108H18.5383" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.61523 6.92529H9.30754" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.61523 12.4614H7.46139" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.0769 1.38916H1.92308C1.41328 1.38916 1 1.80225 1 2.31182V17.0744C1 17.5839 1.41328 17.9971 1.92308 17.9971H24.0769C24.5866 17.9971 25 17.5839 25 17.0744V2.31182C25 1.80225 24.5866 1.38916 24.0769 1.38916Z" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.9229 1.38916V17.9971" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.9229 10.6159L16.1567 8.77053C16.8188 8.22295 17.6512 7.92334 18.5105 7.92334C19.3699 7.92334 20.2024 8.22295 20.8644 8.77053L24.9998 12.4612" stroke="white" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

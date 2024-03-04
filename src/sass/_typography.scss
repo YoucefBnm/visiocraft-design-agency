@@ -154,3 +154,17 @@
     color: var.$color-primary-5;
   }
 }
+
+.underline {
+  position: relative;
+  width: 100%;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var.$color-primary;
+  }
+}
