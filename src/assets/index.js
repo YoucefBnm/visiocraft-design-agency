@@ -10,6 +10,8 @@ import ServicesEcommerceIcon from "./icons/icon-ecommerce.svg";
 import ServicesMobileIcon from "./icons/icon-mobile.svg";
 import ServicesUiuxIcon from "./icons/icon-uiux.svg";
 
+import ShowcaseImage from "./images/showcase-image.jpg";
+
 export {
   HeroVideo,
   Logo,
@@ -21,4 +23,5 @@ export {
   ServicesEcommerceIcon,
   ServicesMobileIcon,
   ServicesUiuxIcon,
+  ShowcaseImage,
 };

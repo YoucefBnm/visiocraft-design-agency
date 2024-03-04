@@ -4,7 +4,7 @@ import LogoImage from "../../components/Logoimage/LogoImage";
 
 const Navbar = () => {
   return (
-    <header className="navbar bg-clip backdrop--1 pad--x-lg pad--y-1 pos--sticky top--0 width--100 z--full flex flex--justify-between flex--align-center">
+    <header className="navbar bg-clip backdrop--05 pad--x-lg pad--b-05 pad--t-2 pos--sticky top--0 width--100 z--full flex flex--justify-between flex--align-center">
       <Link
         to="/"
         className="navbar__logo flex flex--center"
