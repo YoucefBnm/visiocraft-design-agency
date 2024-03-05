@@ -5,6 +5,8 @@ import { motion, useMotionValueEvent } from "framer-motion";
 import "./About.scss";
 import StaggerContainer from "../../components/StaggerContainer/StaggerContainer";
 import { fadeVariants } from "../../libs/motion/motion.variants";
+import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { paragraph } = aboutContent;
@@ -26,9 +28,9 @@ const About = () => {
       <StaggerContainer className="about__container width--75  flex flex--col flex--justify-center flex--align-start gap--x-4">
         <motion.h4
           variants={fadeVariants("left")}
-          className="h color--primary-2"
+          className="h color--light h--3"
         >
-          about us
+          who are we
         </motion.h4>
         <div>
           {splitParagraph.map((letter, index) => (
@@ -46,6 +48,14 @@ const About = () => {
             </motion.span>
           ))}
         </div>
+
+        <Button
+          variant={"link color--primary"}
+          type="button"
+          aria-label="navigate to process page"
+        >
+          <Link to="/process">How it works</Link>
+        </Button>
       </StaggerContainer>
     </section>
   );

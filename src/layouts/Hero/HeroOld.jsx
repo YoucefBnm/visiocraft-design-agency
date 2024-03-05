@@ -15,53 +15,54 @@ const Hero = () => {
   const scaleText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.8], [0.5, 0]);
-  const borderRadius = useTransform(scrollYProgress, [0, 0.2], [200, 10]);
 
   return (
-    <section ref={targetRef} className="hero pos--relative">
-      <StaggerContainer className={"hero__container relative"}>
+    <section ref={targetRef} className="hero">
+      <StaggerContainer className="hero__container">
         <StaggerContainer
           className={
-            "hero__text text--center pad--y-1 pad--x-sm flex flex--col flex--center"
+            "hero__text width--100 flex flex--justify-between pad--x-lg pad--y-lg pos--relative z--2"
           }
-          direction={-1}
           style={{ scale: scaleText, opacity }}
         >
-          {headings.map((heading) => (
-            <motion.h1
-              className="h h--1 color--light"
-              key={heading}
-              variants={fadeVariants("top")}
-            >
-              {heading}
-            </motion.h1>
-          ))}
-          <motion.div variants={fadeVariants("bottom")}>
-            <p className="color--light opacity--8 mar--t-2">{paragraph}</p>
+          <StaggerContainer direction={-1}>
+            {headings.map((heading, index) => (
+              <motion.h3
+                key={`${heading}-${index}`}
+                className="h h--3"
+                variants={fadeVariants("top")}
+              >
+                {heading}
+              </motion.h3>
+            ))}
+          </StaggerContainer>
+
+          <motion.div
+            className="hero__paragraph text--xs flex flex--justify-end"
+            variants={fadeVariants(null)}
+            style={{}}
+          >
+            <p>{paragraph}</p>
           </motion.div>
         </StaggerContainer>
 
         <motion.div
-          layout
-          style={{
-            scale: scaleVideo,
-            borderRadius,
-          }}
-          className="hero__video overflow--hidden"
+          className="hero__video"
+          variants={fadeVariants("z")}
+          style={{ scale: scaleVideo }}
         >
+          <motion.div
+            style={{ opacity: overlayOpacity }}
+            className=" pos--absolute top--0 left--0 width--100 height--100 bg--dark"
+          />
           <video
-            className="vertical--middle"
             width={"100%"}
             loop
             muted
             autoPlay
             playsInline
-            itemType="video/mp4"
             src={HeroVideo}
-          />
-          <motion.div
-            style={{ opacity: overlayOpacity }}
-            className="hero__video-overlay pos--absolute top--0 left--0 width--100 height--100 bg--dark opacity--5"
+            itemType="video/mp4"
           />
         </motion.div>
       </StaggerContainer>

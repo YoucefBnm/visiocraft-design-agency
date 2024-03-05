@@ -15,7 +15,7 @@ const CalculatorMain = () => {
   return (
     <div
       id="calculator-main"
-      className="calculatorMain flex flex--align-center flex--justify-start gap--y-1 flex--wrap"
+      className="calculatorMain flex flex--align-center flex--justify-start gap--1"
     >
       {mainCategories.map((category) => (
         <motion.div

@@ -7,29 +7,31 @@
   cursor: pointer;
   background: none;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 1.6rem;
   &:disabled {
     opacity: 0.7;
   }
+
   &--bg {
     min-width: 12rem;
     height: 4rem;
     color: #fff;
     padding: 1.2rem;
     border-radius: 3rem;
-    // background: rgba(var.$color-dark, 0.);
+    background: rgba(var.$color-dark, 0);
     box-shadow: var.$input-handle-shadow;
 
     &::before {
       content: "";
       position: absolute;
       inset: 0;
-      left: -0.4rem;
+      left: -0.1rem;
       top: -0.1rem;
       margin: auto;
-      width: calc(100% + 0.6rem);
-      height: calc(100% + 0.6rem);
+      width: calc(100% + 0.1rem);
+      height: calc(100% + 0.1rem);
       border-radius: 3rem;
-      background: var.$btn-linear;
+      // background: rgba($color: var.$color-primary, $alpha: 0.2);
       pointer-events: none;
       transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       z-index: -10;
@@ -54,6 +56,20 @@
     }
     &:active {
       scale: 0.9;
+    }
+  }
+  &--link {
+    position: relative;
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    &::after {
+      content: "\2192";
+      font: inherit;
+    }
+    &:hover {
+      gap: 0.6rem;
+      opacity: 0.8;
     }
   }
 }

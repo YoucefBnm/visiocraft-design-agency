@@ -3,47 +3,30 @@
 
 .hero {
   height: 500rem;
-  // background-image: url("../../assets/background/hero-bg.png");
-  // background-size: 100% 100vh;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
+  position: relative;
 
   &__container {
-    min-height: 100vh;
     position: sticky;
     width: 100%;
     top: 0;
+    bottom: 0;
+    min-height: 100vh;
     overflow: hidden;
   }
   &__text {
     @include mixins.respond(tab-port) {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .h {
-      @include mixins.respond(tab-port) {
+      .h--1 {
+        font-size: 5.8rem;
       }
+    }
+    p {
+      width: 36ch;
     }
   }
   &__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40rem;
-    translate: -50% -50%;
+    position: relative;
+    margin: 0 auto;
+    width: 30rem;
     overflow: hidden;
-    border-radius: 0.8rem;
-    video {
-      vertical-align: middle;
-    }
-  }
-  &__paragraph {
-    flex: 1 1 0%;
-    @include mixins.respond(tab-port) {
-      margin-top: 3.2rem;
-    }
-    p {
-      width: 32ch;
-    }
   }
 }

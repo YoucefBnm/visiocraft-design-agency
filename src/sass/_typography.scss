@@ -5,13 +5,14 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  line-height: 1.2;
+  line-height: 1;
 }
 .font-body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.5;
   font-variation-settings: "wdth" 100;
 }
 
@@ -20,7 +21,7 @@
   text-transform: capitalize;
 
   &--1 {
-    font-size: 8rem;
+    font-size: 9.2rem;
   }
   &--2 {
     font-size: 6.4rem;
@@ -45,6 +46,12 @@
   }
   &--xs {
     font-size: 1.4rem;
+  }
+  &--left {
+    text-align: left;
+  }
+  &--right {
+    text-align: right;
   }
   &--center {
     text-align: center;

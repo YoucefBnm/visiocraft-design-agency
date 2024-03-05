@@ -5,7 +5,7 @@ import "./Showcase.scss";
 
 const Showcase = () => {
   const { targetRef, scrollYProgress } = useScrollAnimation();
-  const scale = useTransform(scrollYProgress, [0, 0.85], [6, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.7], [6, 1]);
   const opacity = useTransform(scrollYProgress, [0.2, 0.4], [1, 0]);
 
   return (
@@ -17,7 +17,7 @@ const Showcase = () => {
           }
           style={{ opacity }}
         >
-          <div className="width--50 mar--auto flex flex--center flex--col text--center gap--2">
+          <div className="width--50 mar--auto flex flex--center flex--col text--center gap--2 overflow--hidden">
             <h3 className="h h--3">witness the creativity</h3>
             <p className="text--sm">
               Take a glimpse into our portfolio to witness the creativity and

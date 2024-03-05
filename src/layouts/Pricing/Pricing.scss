@@ -5,11 +5,12 @@
   &__container {
     display: grid;
     grid-template-columns: 0.4fr 0.6fr;
-    gap: 4.8rem;
+    gap: 3.2rem;
     align-items: start;
     @include mixins.respond(tab-port) {
       grid-template-rows: min-content 1fr;
       grid-template-columns: 1fr;
+      gap: 1.6rem;
     }
   }
   &__form {

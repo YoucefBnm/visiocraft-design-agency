@@ -10,7 +10,7 @@ import {
 } from "../assets";
 
 export const heroContent = {
-  headings: ["where vision meets", "craftsmanship in web", "design"],
+  headings: ["where creativity", "takes shape"],
   paragraph:
     "Visiocraft is a design agency specializing in web design and front end development.",
 };
@@ -291,5 +291,28 @@ export const services = [
       "In a mobile-centric world, your website needs to adapt. We ensure that your site is not just responsive but optimized for various devices, delivering a consistent user experience.",
     image: ServicesMobileImage,
     icon: ServicesMobileIcon,
+  },
+];
+
+export const accomplishmentContent = [
+  {
+    id: "accomplishment-projects",
+    title: "projects completed",
+    number: "+200",
+  },
+  {
+    id: "accomplishment-experience",
+    title: "years of experience",
+    number: "8",
+  },
+  {
+    id: "accomplishment-staff",
+    title: "enthousiastes",
+    number: "+15",
+  },
+  {
+    id: "accomplishment-clients",
+    title: "satisfied clients",
+    number: "+100",
   },
 ];
