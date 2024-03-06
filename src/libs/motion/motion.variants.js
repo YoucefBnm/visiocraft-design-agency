@@ -17,8 +17,16 @@ export const fadeVariants = (direction) => {
   };
 };
 
-export const springTransitionConfig = {
-  type: "spring",
-  stiffness: 800,
-  damping: 80,
+export const customCursorVariants = {
+  default: {
+    scale: 1,
+  },
+  difference: {
+    scale: 10,
+    mixBlendMode: "difference",
+  },
+  project: {
+    scale: 10,
+    mixBlendMode: "soft-light",
+  },
 };

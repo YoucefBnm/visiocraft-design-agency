@@ -9,3 +9,15 @@ export const layoutTransition = {
   stiffness: 300,
   damping: 30,
 };
+
+export const springTransitionConfig = {
+  type: "spring",
+  stiffness: 800,
+  damping: 80,
+};
+
+export const customCursorSpringConfig = {
+  damping: 35,
+  stiffness: 700,
+  mass: 1,
+};

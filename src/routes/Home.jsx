@@ -8,7 +8,7 @@ import Showcase from "../layouts/Showcase/Showcase";
 
 const Home = () => {
   return (
-    <>
+    <main className="pos--relative">
       <Hero />
       <About />
       <Services />
@@ -17,7 +17,7 @@ const Home = () => {
       <CalculatorProvider>
         <Pricing />
       </CalculatorProvider>
-    </>
+    </main>
   );
 };
 

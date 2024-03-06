@@ -1,5 +1,5 @@
 import { motion, useTransform } from "framer-motion";
-import { ShowcaseImage } from "../../assets";
+import { ShowcaseImage, ShowcaseImageMd, ShowcaseImageSm } from "../../assets";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 import "./Showcase.scss";
 
@@ -27,14 +27,39 @@ const Showcase = () => {
           </div>
         </motion.div>
         <div className="showcase__image overflow--hidden">
-          <motion.img
+          {/* <motion.img
             style={{ scale }}
             className="width--100 vertical--middle"
             width={1240}
-            height={830}
+            height={615}
             alt="showcase"
             src={ShowcaseImage}
-          />
+          /> */}
+          <motion.div style={{ scale }} className="width--100 vertical--middle">
+            <picture>
+              <source
+                media="(max-width: 850px)"
+                srcSet={ShowcaseImageMd}
+                width={850}
+                height={615}
+                className="width--100"
+              />
+              <source
+                media="(max-width: 600px)"
+                srcSet={ShowcaseImageSm}
+                width={600}
+                height={515}
+                className="width--100"
+              />
+              <img
+                className="width--100"
+                width={1240}
+                height={615}
+                alt="showcase"
+                src={ShowcaseImage}
+              />
+            </picture>
+          </motion.div>
         </div>
       </div>
     </section>

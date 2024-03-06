@@ -2,21 +2,19 @@ import { motion, useTransform } from "framer-motion";
 import { accomplishmentContent } from "../../constants";
 import "./Accomplishment.scss";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
-import StaggerContainer from "../../components/StaggerContainer/StaggerContainer";
-import { fadeVariants } from "../../libs/motion/motion.variants";
 
 const Accomplishment = () => {
   const { targetRef, scrollYProgress } = useScrollAnimation();
 
   const rotate = useTransform(scrollYProgress, [0, 0.2], [-45, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [0.2, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0.1, 1]);
   const y = useTransform(scrollYProgress, [0, 0.1], [160, 0]);
 
   return (
     <section
       ref={targetRef}
       id="accomplishment"
-      className="accomplishment pos--relative "
+      className="accomplishment pos--relative mar--y-lg"
     >
       <div className="accomplishment__container pad--x-lg">
         {accomplishmentContent.map((accomplishment, index) => (
@@ -30,7 +28,7 @@ const Accomplishment = () => {
             }
           >
             <div className="text--left pad--l-md">
-              <h1 className="h h--1 color--primary opacity--7">
+              <h1 className="h h--1 color--primary opacity--8">
                 {accomplishment.number}
               </h1>
             </div>

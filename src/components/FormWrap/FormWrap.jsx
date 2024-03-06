@@ -7,6 +7,8 @@ import { formatPrice } from "../../utils/price/price.utils";
 import { layoutTransition } from "../../libs/motion/motion.transitions";
 import Button from "../Button/Button";
 import Alert from "../Alert/Alert";
+import StaggerContainer from "../StaggerContainer/StaggerContainer";
+import { fadeVariants } from "../../libs/motion/motion.variants";
 
 const UserTotalPrice = () => {
   const { mainCategoryPrice, subCategoryPrice, additionalCategoryPrice } =
@@ -77,7 +79,7 @@ const FormWrap = () => {
   return (
     <form
       onSubmit={handleFormSubmit}
-      className="formWrap flex flex--col  gap--x-2 pad--y-md flex--align-start pad--x-md width--100"
+      className="formWrap flex flex--col  gap--x-2 pad--y-md flex--align-start pad--x-md width--100 pos--relative"
       ref={formRef}
     >
       <UserTotalPrice />
@@ -104,7 +106,13 @@ const FormWrap = () => {
       >
         {loading ? "Sending" : "Send"}
       </Button>
-      {show && <Alert type={type} text={text} />}
+      {show && (
+        <StaggerContainer className="">
+          <motion.div variants={fadeVariants("bottom")}>
+            <Alert type={type} text={text} />
+          </motion.div>
+        </StaggerContainer>
+      )}
     </form>
   );
 };

@@ -5,17 +5,24 @@ import "./Hero.scss";
 import { fadeVariants } from "../../libs/motion/motion.variants";
 import { HeroVideo } from "../../assets";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
+import { useContext } from "react";
+import { CustomCursorContext } from "../../context/customCursor/customCursor.context";
 
 const Hero = () => {
   const { headings, paragraph } = heroContent;
 
   const { targetRef, scrollYProgress } = useScrollAnimation();
-  const scaleVideo = useTransform(scrollYProgress, [0, 0.8], [1, 3]);
+  const scaleVideo = useTransform(scrollYProgress, [0, 0.8], [1, 4]);
 
   const scaleText = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.8], [0.5, 0]);
   const borderRadius = useTransform(scrollYProgress, [0, 0.2], [200, 10]);
+
+  const { setCursorVariant } = useContext(CustomCursorContext);
+
+  const handleMouseEnter = () => setCursorVariant("difference");
+  const handleMouseLeave = () => setCursorVariant("default");
 
   return (
     <section ref={targetRef} className="hero pos--relative">
@@ -32,12 +39,14 @@ const Hero = () => {
               className="h h--1 color--light"
               key={heading}
               variants={fadeVariants("top")}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
             >
               {heading}
             </motion.h1>
           ))}
           <motion.div variants={fadeVariants("bottom")}>
-            <p className="color--light opacity--8 mar--t-2">{paragraph}</p>
+            <p className="opacity--8  mar--t-2">{paragraph}</p>
           </motion.div>
         </StaggerContainer>
 

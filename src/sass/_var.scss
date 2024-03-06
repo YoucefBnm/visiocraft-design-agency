@@ -1,22 +1,25 @@
-$color-light: #aeac95;
+$color-light: #fcecc9;
 $color-dark: #121420;
 $color-dark-1: #1b2432;
 $color-dark-2: #2c2b3c;
 $color-dark-3: lighten($color-dark, 22%);
 $color-dark-4: lighten($color-dark, 32%);
 $color-dark-5: lighten($color-dark, 50%);
-$color-primary: #df2935;
-$color-primary-1: lighten($color-primary, 5%);
-$color-primary-2: lighten($color-primary, 10%);
-$color-primary-3: lighten($color-primary, 18%);
-$color-primary-4: lighten($color-primary, 24%);
-$color-primary-5: lighten($color-primary, 34%);
+$color-primary: #df2a36;
+$color-primary-1: lighten($color-primary, 4%);
+$color-primary-2: lighten($color-primary, 8%);
+$color-primary-3: lighten($color-primary, 12%);
+$color-primary-4: lighten($color-primary, 16%);
+$color-primary-5: lighten($color-primary, 20%);
 $color-purple: #3423a6;
-$color-green: #129490;
+$color-green: hsl(178, 74%, 52%);
 $linear-text: linear-gradient(-45deg, $color-primary, $color-dark-3);
+
+$linear-bg: linear-gradient(-46deg, $color-dark-2 0%, $color-dark 100%);
+
 $input-border: 1px solid rgba($color-primary, 0.5);
 $input-bg: rgba($color-primary, 0.2);
-$input-handle-shadow: inset 1px 2px 4px $color-dark;
+$input-handle-shadow: inset 1px 2px 4px $color-dark-3;
 
 $btn-linear: linear-gradient(-45deg, $color-dark 0%, $color-primary 100%);
 $btn-linear-reverse: linear-gradient(

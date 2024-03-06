@@ -43,25 +43,25 @@ export const pricing = {
   subCategories: [
     {
       id: "price-sub-pages",
-      title: "number of pages",
+      title: "pages",
       price: 100,
       value: 1,
     },
     {
       id: "price-sub-sections",
-      title: "number of sections",
+      title: "sections",
       price: 20,
       value: 1,
     },
     {
       id: "price-sub-products",
-      title: "number of products",
+      title: "products",
       price: 50,
       value: 1,
     },
     {
       id: "price-sub-portfolios",
-      title: "number of portfolios",
+      title: "portfolios",
       price: 50,
       value: 1,
     },

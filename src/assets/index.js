@@ -11,6 +11,8 @@ import ServicesMobileIcon from "./icons/icon-mobile.svg";
 import ServicesUiuxIcon from "./icons/icon-uiux.svg";
 
 import ShowcaseImage from "./images/showcase-image.jpg";
+import ShowcaseImageMd from "./images/showcase-image-md.jpg";
+import ShowcaseImageSm from "./images/showcase-image-sm.jpg";
 
 export {
   HeroVideo,
@@ -24,4 +26,6 @@ export {
   ServicesMobileIcon,
   ServicesUiuxIcon,
   ShowcaseImage,
+  ShowcaseImageMd,
+  ShowcaseImageSm,
 };

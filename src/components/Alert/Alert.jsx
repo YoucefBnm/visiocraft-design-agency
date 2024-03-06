@@ -1,13 +1,10 @@
-import { motion } from "framer-motion";
+import "./Alert.scss";
 
-const Alert = ({ variants, type, text }) => {
+const Alert = ({ type, text }) => {
   return (
-    <motion.div
-      variants={variants}
-      className={`alert bg--${type} text--sm flex rad--2 pad--y-2 pad--x-2 flex--align-center`}
-    >
+    <div className={`alert text--sm alert__${type}`}>
       <span>{text}</span>
-    </motion.div>
+    </div>
   );
 };
 

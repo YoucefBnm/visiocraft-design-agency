@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { aboutContent } from "../../constants";
 import { useScrollAnimation } from "../../hooks/useScrollAnimation";
 import { motion, useMotionValueEvent } from "framer-motion";
@@ -7,6 +7,7 @@ import StaggerContainer from "../../components/StaggerContainer/StaggerContainer
 import { fadeVariants } from "../../libs/motion/motion.variants";
 import Button from "../../components/Button/Button";
 import { Link } from "react-router-dom";
+import { CustomCursorContext } from "../../context/customCursor/customCursor.context";
 
 const About = () => {
   const { paragraph } = aboutContent;
@@ -18,6 +19,10 @@ const About = () => {
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     setCurrentScrollY(latest);
   });
+
+  const { setCursorVariant } = useContext(CustomCursorContext);
+  const handleMouseEnter = () => setCursorVariant("difference");
+  const handleMouseLeave = () => setCursorVariant("default");
 
   return (
     <section
@@ -32,14 +37,15 @@ const About = () => {
         >
           who are we
         </motion.h4>
-        <div>
+        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {splitParagraph.map((letter, index) => (
             <motion.span
               className="h h--4"
               key={`${letter}-${index}`}
               initial={{ opacity: 0.2 }}
               animate={
-                (index / splitParagraph.length).toFixed(2) <= currentScrollY
+                (index / (splitParagraph.length - 1)).toFixed(2) <=
+                currentScrollY
                   ? { opacity: 1 }
                   : { opacity: 0.2 }
               }
