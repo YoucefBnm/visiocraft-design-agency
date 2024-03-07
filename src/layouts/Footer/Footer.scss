@@ -1,0 +1,45 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.footer {
+  margin-top: var.$gap-6;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var.$gap-4;
+  border-top: 1px solid var.$color-dark-2;
+
+  &__logo {
+    text-align: center;
+    @include mixins.respond(phone) {
+      width: 100%;
+    }
+    @include mixins.flex-col;
+    gap: var.$gap-2;
+    img {
+      vertical-align: middle;
+    }
+    p {
+      opacity: 0.5 !important;
+    }
+  }
+
+  &__info {
+    @include mixins.flex-col;
+    gap: var.$gap-2;
+    overflow: hidden;
+  }
+  &__info-group {
+    @include mixins.flex-col;
+    width: 100%;
+    gap: var.$gap-1;
+  }
+  &__social {
+    @include mixins.flex-col;
+    gap: var.$gap-1;
+    overflow: hidden;
+  }
+}

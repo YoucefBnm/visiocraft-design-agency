@@ -20,7 +20,7 @@ const CalculatorMain = () => {
       {mainCategories.map((category) => (
         <motion.div
           key={category.id}
-          className="calculatorMain__group pos--relative overflow--hidden"
+          className="calculatorMain__group"
           whileHover={{ opacity: 0.8 }}
         >
           <input
@@ -35,20 +35,15 @@ const CalculatorMain = () => {
           {mainCategorySelected === category.title && (
             <motion.div
               layoutId="calculator-main"
-              className="input--main input--main--check bg--primary-2"
+              className="input--main input--main--check bg--green"
               transition={layoutTransition}
             >
-              <span className="inline-block">
+              <span>
                 <IconCheck />
               </span>
             </motion.div>
           )}
-          <label
-            className="pointer-events--none pos--relative"
-            htmlFor={category.title}
-          >
-            {category.title}
-          </label>
+          <label htmlFor={category.title}>{category.title}</label>
         </motion.div>
       ))}
     </div>
@@ -59,12 +54,12 @@ const CalculatorSub = () => {
   const { subCategory, setSubCategory } = useContext(CalculatorContext);
 
   return (
-    <div className="calculatorSub flex flex--col gap--y-1">
+    <div className="calculatorSub">
       {subCategory.map((category) => (
         <div key={category.id} className="calculatorSub__group">
-          <div className="flex flex--align-center flex--justify-between pad--l-xs">
+          <div className="calculatorSub__label">
             <label htmlFor={category.title}>{category.title}</label>
-            <div className="calculatorSub__value text--xs">
+            <div className="calculatorSub__value">
               <motion.span
                 key={category.value}
                 initial={{ opacity: 0 }}
@@ -75,7 +70,7 @@ const CalculatorSub = () => {
             </div>
           </div>
 
-          <div className="calculatorSub__input pos--relative mar--y-05 with--100 overflow--hidden">
+          <div className="calculatorSub__input">
             <input
               className="input--range"
               type="range"
@@ -89,7 +84,7 @@ const CalculatorSub = () => {
             <motion.div
               layout
               transition={{ ease: "linear", duration: 0.05 }}
-              className="input--progress pos--absolute width--100"
+              className="input--progress"
               style={{
                 width: `${Number(((category.value - 1) * 100) / (20 - 1))}%`,
               }}
@@ -106,15 +101,18 @@ const CalculatorAdditional = () => {
     useContext(CalculatorContext);
 
   return (
-    <div className="calculatorAdditional flex flex--col gap--x-1">
+    <div className="calculatorAdditional">
       {additionalCategory.map((service) => (
-        <div className="flex flex--align-center gap--y-1" key={service.id}>
+        <div className="calculatorAdditional__group" key={service.id}>
           <label htmlFor={service.id}>{service.title}</label>
 
           <motion.div
-            className={`pos--relative input--switch flex flex--align-center ${
-              service.isChecked ? "flex--justify-end" : "flex--justify-start"
-            }`}
+            className="calculatorAdditional__input input--switch"
+            style={
+              service.isChecked
+                ? { justifyContent: "flex-end" }
+                : { justifyContent: "flex-start" }
+            }
             whileHover={{ opacity: 0.8 }}
           >
             <input
@@ -126,7 +124,7 @@ const CalculatorAdditional = () => {
               layout
               transition={layoutTransition}
               className={`input--handle ${
-                service.isChecked ? "bg--primary-2" : "bg--dark-4"
+                service.isChecked ? "bg--green" : "bg--dark-4"
               }`}
             />
           </motion.div>
@@ -138,7 +136,7 @@ const CalculatorAdditional = () => {
 
 const CalculatorWrap = () => {
   return (
-    <div className="calculatorWrap flex flex--col gap--x-3 pad--y-sm pad--x-md bg--dark-1">
+    <div className="calculatorWrap bg--dark">
       <CalculatorMain />
 
       <CalculatorSub />

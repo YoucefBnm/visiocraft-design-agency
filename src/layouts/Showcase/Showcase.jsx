@@ -9,33 +9,24 @@ const Showcase = () => {
   const opacity = useTransform(scrollYProgress, [0.2, 0.4], [1, 0]);
 
   return (
-    <section id="showcase" className="showcase">
+    <section className="showcase" id="showcase">
       <div ref={targetRef} className="showcase__container">
-        <motion.div
-          className={
-            "showcase__text flex flex--center gap--2 color--dark overflow--hidden"
-          }
-          style={{ opacity }}
-        >
-          <div className="width--50 mar--auto flex flex--center flex--col text--center gap--2 overflow--hidden">
-            <h3 className="h h--3">witness the creativity</h3>
+        <motion.div className="showcase__text" style={{ opacity }}>
+          <div className="showcase__text showcase__text--wrap color--dark ">
+            <h3 className="h h--3">Witness the creativity</h3>
             <p className="text--sm">
               Take a glimpse into our portfolio to witness the creativity and
               precision we bring to each project. From sleek corporate websites
-              to vibrant e-commerce platforms.
+              to vibrante e-commerce platforms.
             </p>
           </div>
         </motion.div>
-        <div className="showcase__image overflow--hidden">
-          {/* <motion.img
+
+        <div className="showcase__image">
+          <motion.div
+            className="showcase__image showcase__image--wrap"
             style={{ scale }}
-            className="width--100 vertical--middle"
-            width={1240}
-            height={615}
-            alt="showcase"
-            src={ShowcaseImage}
-          /> */}
-          <motion.div style={{ scale }} className="width--100 vertical--middle">
+          >
             <picture>
               <source
                 media="(max-width: 850px)"

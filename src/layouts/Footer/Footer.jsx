@@ -3,11 +3,12 @@ import StaggerContainer from "../../components/StaggerContainer/StaggerContainer
 import { fadeVariants } from "../../libs/motion/motion.variants";
 import LogoImage from "../../components/Logoimage/LogoImage";
 import { footerLinks } from "../../constants";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
-    <footer className="footer pad--y-md pad--x-lg flex flex--wrap flex--align-start flex--justify-between gap--4 border--t-1">
-      <StaggerContainer className="flex flex--col gap--1 flex--center overflow--hidden">
+    <footer className="footer pad--x-lg">
+      <StaggerContainer className="footer__logo">
         <motion.div variants={fadeVariants("left")}>
           <LogoImage />
         </motion.div>
@@ -16,21 +17,21 @@ const Footer = () => {
         </motion.p>
       </StaggerContainer>
 
-      <StaggerContainer className="flex flex--col gap--2 overflow--hidden">
+      <StaggerContainer className="footer__info">
         <motion.div
           variants={fadeVariants("right")}
-          className="flex gap--1 flex--col width--100"
+          className="footer__info-group"
         >
           <h4 className="h text--sm">give us a call</h4>
-          <p className="text--xs color--primary-2">+213 777 915 747</p>
+          <p className="text--xs color--primary-4">+213 777 915 747</p>
         </motion.div>
         <motion.div
           variants={fadeVariants("right")}
-          className="flex gap--1 flex--col width--100"
+          className="footer__info-group"
         >
           <h4 className="h text--sm">leave us a message</h4>
           <a
-            className="text--xs color--primary-2"
+            className="text--xs color--primary-4"
             href="mailto:ssefbnm@gmail.com"
           >
             visiocarft@mail.io
@@ -38,7 +39,7 @@ const Footer = () => {
         </motion.div>
       </StaggerContainer>
 
-      <StaggerContainer className="flex flex--col gap--1 overflow--hidden">
+      <StaggerContainer className="footer__social">
         {footerLinks.map((link) => (
           <motion.a
             variants={fadeVariants(null)}
@@ -46,7 +47,7 @@ const Footer = () => {
             aria-label="social link"
             target="_blank"
             key={link.id}
-            className="text--sm color--primary"
+            className="text--sm color--primary-2"
           >
             {link.name}
           </motion.a>

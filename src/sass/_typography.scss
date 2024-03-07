@@ -1,13 +1,13 @@
 @use "./var";
 
-.font-heading {
+@mixin font-heading {
   font-family: "Space Grotesk", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   line-height: 1.2;
 }
-.font-body {
+@mixin font-body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -17,7 +17,7 @@
 }
 
 .h {
-  @extend .font-heading;
+  @include font-heading;
   text-transform: capitalize;
 
   &--1 {
@@ -160,19 +160,5 @@
   }
   &--primary-5 {
     color: var.$color-primary-5;
-  }
-}
-
-.underline {
-  position: relative;
-  width: 100%;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 1px;
-    background-color: var.$color-primary;
   }
 }

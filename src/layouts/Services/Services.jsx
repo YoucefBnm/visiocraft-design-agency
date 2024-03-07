@@ -23,26 +23,22 @@ const Services = () => {
   useMotionValueEvent(y, "change", (latest) => {
     const prog = Math.floor((latest / (services.length - 1)) * 10);
     setCurrentScrollY(prog);
-    // console.log(latest, "latest");
   });
 
-  console.log(currentScrollY, "scroll y");
   return (
     <section ref={targetRef} id="services" className="services">
       <div className="services__container pad--x-lg pad--y-lg">
-        <div
-          id="services-tabs"
-          className="services__tabs flex flex--col gap--3  flex--align-start"
-        >
+        <div id="services-tabs" className="services__tabs">
           {services.map((service, index) => (
             <div
-              className="services__tab inline-block pos--relative"
+              className="services__tab inline-block"
               key={`${service.id}-${service}`}
             >
               <motion.h4
-                className={`h pos--relative bg--dark z--2 ${
-                  index == currentScrollY ? "opacity--1" : "opacity--2"
-                }`}
+                className="h bg--dark"
+                style={
+                  index === currentScrollY ? { opacity: 1 } : { opacity: 0.2 }
+                }
               >
                 {service.mainTitle}
               </motion.h4>
@@ -68,10 +64,10 @@ const Services = () => {
             {services.map((service, index) => (
               <motion.div
                 key={`${service.id}-${index}`}
-                className="services__card flex flex--col  gap--2 "
+                className="services__card"
               >
-                <h4 className="h h--4">{service.subTitle}</h4>
-                <p className="text--sm opacity--8">{service.paragraph}</p>
+                <h4 className="h h--4 color--light">{service.subTitle}</h4>
+                <p className="text--sm">{service.paragraph}</p>
               </motion.div>
             ))}
           </motion.div>
@@ -89,6 +85,7 @@ const Services = () => {
                     className="services__image"
                   >
                     <img
+                      loading="lazy"
                       width={320}
                       height={230}
                       alt="service image"
@@ -96,10 +93,6 @@ const Services = () => {
                     />
                   </motion.div>
                 )}
-
-                {/* <div className="serivices__image-icon">
-                <img src={service.icon} aria-hidden="true" width={24} />
-              </div> */}
               </AnimatePresence>
             </div>
           ))}

@@ -1,4 +1,10 @@
 import {
+  PortfolioDesignImage,
+  PortfolioManagement2Image,
+  PortfolioManagement3Image,
+  PortfolioManagementImage,
+  PortfolioTravelImage,
+  PortfolioYogaImage,
   ServicesDevIcon,
   ServicesDevImage,
   ServicesEcommerceIcon,
@@ -314,5 +320,32 @@ export const accomplishmentContent = [
     id: "accomplishment-clients",
     title: "satisfied clients",
     number: "+100",
+  },
+];
+
+export const portfolioImages = [
+  {
+    id: "portfolio-management",
+    image: PortfolioManagementImage,
+  },
+  {
+    id: "portfolio-travel",
+    image: PortfolioTravelImage,
+  },
+  {
+    id: "portfolio-management-2",
+    image: PortfolioManagement2Image,
+  },
+  {
+    id: "portfolio-management-3",
+    image: PortfolioManagement3Image,
+  },
+  {
+    id: "portfolio-yoga",
+    image: PortfolioYogaImage,
+  },
+  {
+    id: "portfolio-design",
+    image: PortfolioDesignImage,
   },
 ];

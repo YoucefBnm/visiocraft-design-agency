@@ -1,0 +1,43 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.cta {
+  margin-bottom: 15rem;
+  &__container {
+    height: 100rem;
+    position: relative;
+    overflow: hidden;
+  }
+  &__images {
+    // position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var.$gap-3;
+    top: 6rem;
+    width: 100%;
+
+    picture {
+      vertical-align: middle;
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+  &__text {
+    @include mixins.flex-col;
+    @include mixins.flex-center;
+    gap: var.$gap-2;
+    z-index: 2;
+    width: 50%;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    @include mixins.respond(tab-port) {
+      width: 80%;
+      left: 10%;
+      translate: -0% -50%;
+    }
+  }
+}

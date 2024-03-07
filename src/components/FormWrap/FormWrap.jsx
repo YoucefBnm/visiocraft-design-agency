@@ -19,10 +19,10 @@ const UserTotalPrice = () => {
   const displayPrice = formatPrice(totalPrice);
 
   return (
-    <div className="flex flex--col gap--x-1 flex--center mar--b-3 width--100 text--center">
+    <div className="formPrice">
       <h5 className="h h--5">Total Price</h5>
       <motion.h3
-        className="h h--4 overflow--hidden"
+        className="h h--4"
         key={totalPrice}
         transition={layoutTransition}
         initial={{ opacity: 0.2 }}
@@ -77,11 +77,7 @@ const FormWrap = () => {
 
   const { email, name, message } = formFields;
   return (
-    <form
-      onSubmit={handleFormSubmit}
-      className="formWrap flex flex--col  gap--x-2 pad--y-md flex--align-start pad--x-md width--100 pos--relative"
-      ref={formRef}
-    >
+    <form onSubmit={handleFormSubmit} className="formWrap " ref={formRef}>
       <UserTotalPrice />
       <UserInput
         inputType={"text"}
@@ -99,7 +95,7 @@ const FormWrap = () => {
       <UserTextarea value={message} handleChange={handleFormFieldChange} />
 
       <Button
-        variant={"bg"}
+        variant={"bg bg--primary"}
         type={"submit"}
         disabled={loading}
         aria-label="send email"
@@ -107,7 +103,7 @@ const FormWrap = () => {
         {loading ? "Sending" : "Send"}
       </Button>
       {show && (
-        <StaggerContainer className="">
+        <StaggerContainer>
           <motion.div variants={fadeVariants("bottom")}>
             <Alert type={type} text={text} />
           </motion.div>

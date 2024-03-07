@@ -11,6 +11,7 @@ function App() {
     <>
       <CustomCursorProvider>
         <CustomCursor />
+
         <Navbar />
         <Routes>
           <Route index element={<Home />} />

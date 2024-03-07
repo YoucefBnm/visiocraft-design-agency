@@ -25,15 +25,11 @@ const About = () => {
   const handleMouseLeave = () => setCursorVariant("default");
 
   return (
-    <section
-      ref={targetRef}
-      className="about pos--relative pad--x-lg pad--y-lg"
-      id="about"
-    >
-      <StaggerContainer className="about__container width--75  flex flex--col flex--justify-center flex--align-start gap--x-4">
+    <section ref={targetRef} className="about pad--x-lg pad--y-4" id="about">
+      <StaggerContainer className="about__container">
         <motion.h4
           variants={fadeVariants("left")}
-          className="h color--light h--3"
+          className="h h--3 color--light"
         >
           who are we
         </motion.h4>

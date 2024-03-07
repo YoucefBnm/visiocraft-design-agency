@@ -2,38 +2,74 @@
 @use "../../sass/mixins";
 
 .calculatorWrap {
-  border-right: var.$form-border;
+  padding: var.$gap-4 var.$gap-3;
+  @include mixins.flex-col;
+  gap: var.$gap-2;
 }
 
 .calculatorMain {
+  display: flex;
+  justify-content: flex-start;
+  gap: var.$gap-2;
+  align-items: center;
   @include mixins.respond(tab-land) {
-    // flex-wrap: wrap;
     flex-wrap: wrap;
-    row-gap: 1.6rem;
   }
   &__group {
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
-    // width: 17rem;
-    padding-left: 1.8rem;
-    padding-right: 0.8rem;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-    text-align: center;
+    padding: 0.4rem 0.8rem 0.4rem 1.6rem;
     border: var.$input-border;
-    border-radius: 999px;
-    // padding-left: 0.8rem;
-
-    // background-color: rgba(var.$color-primary, 0.2);
+    border-radius: 9999px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    label {
+      vertical-align: middle;
+      pointer-events: none;
+      position: relative;
+    }
   }
 }
 
 .calculatorSub {
-  // width: 34.5rem;
+  @include mixins.flex-col;
+  gap: var.$gap-1;
+  position: relative;
+  overflow: hidden;
   width: 100%;
+  &__input {
+    position: relative;
+  }
+  &__group {
+    @include mixins.flex-col;
+    gap: var.$gap-05;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .calculatorAdditional {
-  label {
-    width: 12rem;
+  @include mixins.flex-col;
+  gap: var.$gap-1;
+
+  &__input {
+    position: relative;
+    background-color: red;
+    display: flex;
+    align-items: center;
+  }
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: var.$gap-1;
+    label {
+      width: 13rem;
+    }
   }
 }

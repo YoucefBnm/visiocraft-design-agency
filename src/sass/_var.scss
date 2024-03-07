@@ -1,23 +1,23 @@
 $color-light: #fcecc9;
-$color-dark: #121420;
-$color-dark-1: #1b2432;
-$color-dark-2: #2c2b3c;
+$color-dark: #161314;
+$color-dark-1: #211c1e;
+$color-dark-2: #2c2628;
 $color-dark-3: lighten($color-dark, 22%);
 $color-dark-4: lighten($color-dark, 32%);
 $color-dark-5: lighten($color-dark, 50%);
-$color-primary: #df2a36;
+$color-primary: #04f06a;
 $color-primary-1: lighten($color-primary, 4%);
 $color-primary-2: lighten($color-primary, 8%);
 $color-primary-3: lighten($color-primary, 12%);
 $color-primary-4: lighten($color-primary, 16%);
 $color-primary-5: lighten($color-primary, 20%);
-$color-purple: #3423a6;
-$color-green: hsl(178, 74%, 52%);
+$color-purple: #baa5ff;
+$color-green: #2ec4b6;
 $linear-text: linear-gradient(-45deg, $color-primary, $color-dark-3);
 
 $linear-bg: linear-gradient(-46deg, $color-dark-2 0%, $color-dark 100%);
 
-$input-border: 1px solid rgba($color-primary, 0.5);
+$input-border: 1px solid rgba($color-green, 0.5);
 $input-bg: rgba($color-primary, 0.2);
 $input-handle-shadow: inset 1px 2px 4px $color-dark-3;
 
@@ -29,3 +29,18 @@ $btn-linear-reverse: linear-gradient(
 );
 
 $form-border: 1px solid rgba($color-dark-2, 0.8);
+
+$font-base: 1.8rem;
+$font-lg: 2rem;
+$font-sm: 1.6rem;
+$font-xs: 1.4rem;
+
+$gap-05: 0.4rem;
+$gap-1: 0.8rem;
+$gap-2: 1.6rem;
+$gap-3: 2.4rem;
+$gap-4: 3.2rem;
+$gap-5: 4rem;
+$gap-6: 4.8rem;
+$gap-7: 5.6rem;
+$gap-8: 6.4rem;

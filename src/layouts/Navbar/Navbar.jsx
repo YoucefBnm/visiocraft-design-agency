@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import LogoImage from "../../components/Logoimage/LogoImage";
+import "./Navbar.scss";
 
 const Navbar = () => {
   return (
-    <header className="navbar bg-clip backdrop--05 pad--x-lg pad--b-05 pad--t-2 pos--sticky top--0 width--100 z--full flex flex--justify-between flex--align-center">
+    <header className="navbar pad--x-lg">
       <Link
         to="/"
         className="navbar__logo flex flex--center"
@@ -13,7 +14,7 @@ const Navbar = () => {
         <LogoImage />
       </Link>
 
-      <Button type="button" variant={"bg"}>
+      <Button type="button" variant={"bg btn--bg--primary"}>
         <Link
           className="vertical--middle"
           to="/contact"

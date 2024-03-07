@@ -1,19 +1,31 @@
+@use "../../sass/var";
 @use "../../sass/mixins";
 
 .about {
   height: 350rem;
+  position: relative;
+  padding: var.$gap-4 0;
+
   &__container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var.$gap-2;
     position: sticky;
     min-height: 100svh;
     top: 0;
+
     @include mixins.respond(phone) {
       width: 95% !important;
     }
     .h {
       line-height: 1.5;
     }
-    div {
-      .h {
+    .h--4 {
+      @include mixins.respond(phone) {
+        font-size: 2.4rem;
       }
     }
   }

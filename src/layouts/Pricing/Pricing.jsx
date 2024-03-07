@@ -10,16 +10,10 @@ const Pricing = () => {
   const { heading, lead, paragraph } = pricingSectionText;
 
   return (
-    <section id="pricing" className="pad--x-lg  mar--y-lg overflow--hidden">
-      <StaggerContainer className={"pricing__container"}>
-        <StaggerContainer
-          direction={-1}
-          className="flex flex--col flex--justify-center flex--align-start gap--x-1"
-        >
-          <motion.h5
-            variants={fadeVariants("top")}
-            className="h h--5 color--primary-3"
-          >
+    <section id="pricing" className="pricing pad--x-lg">
+      <div className="pricing__container">
+        <StaggerContainer direction={-1} className="pricing__text">
+          <motion.h5 variants={fadeVariants("top")} className="h h--5">
             {lead}
           </motion.h5>
           <motion.h3 variants={fadeVariants("top")} className="h h--3">
@@ -31,14 +25,11 @@ const Pricing = () => {
           </motion.p>
         </StaggerContainer>
 
-        <motion.div
-          variants={fadeVariants("right")}
-          className="pricing__form flex flex--justify-between"
-        >
+        <motion.div variants={fadeVariants("right")} className="pricing__form">
           <CalculatorWrap />
           <FormWrap />
         </motion.div>
-      </StaggerContainer>
+      </div>
     </section>
   );
 };

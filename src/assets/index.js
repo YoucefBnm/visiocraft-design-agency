@@ -14,6 +14,13 @@ import ShowcaseImage from "./images/showcase-image.jpg";
 import ShowcaseImageMd from "./images/showcase-image-md.jpg";
 import ShowcaseImageSm from "./images/showcase-image-sm.jpg";
 
+import PortfolioDesignImage from "./images/portfolio-design.png";
+import PortfolioManagementImage from "./images/portfolio-management.png";
+import PortfolioManagement2Image from "./images/portfolio-management-2.png";
+import PortfolioManagement3Image from "./images/portfolio-management-3.png";
+import PortfolioTravelImage from "./images/portfolio-travel.png";
+import PortfolioYogaImage from "./images/portfolio-yoga.png";
+
 export {
   HeroVideo,
   Logo,
@@ -28,4 +35,10 @@ export {
   ShowcaseImage,
   ShowcaseImageMd,
   ShowcaseImageSm,
+  PortfolioDesignImage,
+  PortfolioManagementImage,
+  PortfolioManagement2Image,
+  PortfolioManagement3Image,
+  PortfolioTravelImage,
+  PortfolioYogaImage,
 };

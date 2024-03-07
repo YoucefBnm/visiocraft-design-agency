@@ -1,21 +1,27 @@
-@mixin absoluteCenter {
+@mixin absolute-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-@mixin ellipseBg {
-  content: "";
+@mixin absolute-full {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  left: -5rem;
-  top: 0;
-  border-radius: 632px;
-  z-index: -1;
-  filter: blur(200.5px);
-  border-radius: 50%;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin respond($breakpoint) {

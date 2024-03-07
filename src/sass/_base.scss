@@ -1,5 +1,5 @@
 @use "./var";
-@import "./typography";
+@use "./typography";
 
 *,
 *::before,
@@ -21,13 +21,14 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   line-height: 1.5;
   min-height: 100vh;
   font-size: 1.8rem;
   font-weight: 400;
   color: #fff;
   background-color: var.$color-dark;
-  @extend .font-body;
+  @include typography.font-body;
 }
 
 a {

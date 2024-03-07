@@ -1,0 +1,15 @@
+@use "../../sass/var";
+
+.navbar {
+  position: sticky;
+  padding-top: var.$gap-2;
+  padding-bottom: var.$gap-1;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-clip: content-box;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

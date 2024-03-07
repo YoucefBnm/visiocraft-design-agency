@@ -14,6 +14,15 @@
     overflow: hidden;
   }
   &__text {
+    padding: var.$gap-1 var.$gap-4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+      margin: var.$gap-2 0;
+    }
     @include mixins.respond(tab-port) {
       .h--1 {
         font-size: 5.8rem;
@@ -26,7 +35,10 @@
   &__video {
     position: relative;
     margin: 0 auto;
-    width: 22rem;
+    width: 16rem;
     overflow: hidden;
+    video {
+      vertical-align: middle;
+    }
   }
 }
