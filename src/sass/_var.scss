@@ -1,18 +1,20 @@
-$color-light: #fcecc9;
-$color-dark: #161314;
-$color-dark-1: #211c1e;
-$color-dark-2: #2c2628;
+$color-light: #fcf7ff;
+// $color-bg: hsl(220, 8%, 8%);
+// $color-text: hsl(180, 29%, 91%);
+$color-dark: #1f2041;
+$color-dark-1: #1b1b37;
+$color-dark-2: #141429;
 $color-dark-3: lighten($color-dark, 22%);
 $color-dark-4: lighten($color-dark, 32%);
 $color-dark-5: lighten($color-dark, 50%);
-$color-primary: #04f06a;
+$color-primary: #ffc857;
 $color-primary-1: lighten($color-primary, 4%);
 $color-primary-2: lighten($color-primary, 8%);
 $color-primary-3: lighten($color-primary, 12%);
 $color-primary-4: lighten($color-primary, 16%);
 $color-primary-5: lighten($color-primary, 20%);
 $color-purple: #baa5ff;
-$color-green: #2ec4b6;
+$color-green: #06d6a0;
 $linear-text: linear-gradient(-45deg, $color-primary, $color-dark-3);
 
 $linear-bg: linear-gradient(-46deg, $color-dark-2 0%, $color-dark 100%);
@@ -28,7 +30,7 @@ $btn-linear-reverse: linear-gradient(
   $color-dark-2 100%
 );
 
-$form-border: 1px solid rgba($color-dark-2, 0.8);
+$form-border: 1px solid lighten($color-dark, 10%);
 
 $font-base: 1.8rem;
 $font-lg: 2rem;

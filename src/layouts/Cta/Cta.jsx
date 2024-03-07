@@ -21,26 +21,22 @@ const Cta = () => {
   //   style="translate: none; rotate: none; scale: none; transform: translate3d(-470.508px, 207.609px, 0px) rotate(-41.943deg);"
   return (
     <section id="cta" className="cta">
-      <motion.div
-        style={{ opacity: textOpacity }}
-        className="cta__text flex flex--col flex--center text--center gap--2 z--2"
-      >
-        <h3 className="h h--3 color--light">
-          Ready to Transform Your Online Presence
-        </h3>
-        <p>
-          Let VisioCraft be your guide in creating a website that reflects your
-          vision and captivates your audience.
-        </p>
-        <Button variant={"shadow btn--shadow--primary"}>
-          <Link to="/contact">Get Started</Link>
-        </Button>
+      <motion.div style={{ opacity: textOpacity }} className="cta__text">
+        <div className="cta__text-wrap">
+          <h3 className="h h--3 color--light">
+            Ready to Transform Your Online Presence
+          </h3>
+          <p>
+            Let VisioCraft be your guide in creating a website that reflects
+            your vision and captivates your audience.
+          </p>
+          <Button variant={"shadow btn--shadow--primary"}>
+            <Link to="/contact">Get Started</Link>
+          </Button>
+        </div>
       </motion.div>
-      <div
-        ref={targetRef}
-        className="cta__container pos--relativ overflow--hidden"
-      >
-        <div className="cta__images flex flex--wrap flex--justify-center gap--3 ">
+      <div ref={targetRef} className="cta__container">
+        <div className="cta__images">
           {portfolioImages.map((image, index) => (
             <motion.div
               key={image.id}
@@ -62,7 +58,6 @@ const Cta = () => {
                 <img
                   width={463}
                   height={304}
-                  className="vertical--middle"
                   src={image.image}
                   loading="lazy"
                 />

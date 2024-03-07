@@ -17,16 +17,16 @@ html {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   color-scheme: dark;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 }
 
 body {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   line-height: 1.5;
   min-height: 100vh;
   font-size: 1.8rem;
   font-weight: 400;
-  color: #fff;
+  color: var.$color-light;
   background-color: var.$color-dark;
   @include typography.font-body;
 }

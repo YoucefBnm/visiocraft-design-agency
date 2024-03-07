@@ -19,9 +19,24 @@
     justify-content: center;
     align-items: flex-start;
     gap: var.$gap-1;
+    @include mixins.respond(tab-port) {
+      text-align: center;
+      @include mixins.flex-center;
+    }
 
-    .h--5 {
-      color: var.$color-primary;
+    .h--3 {
+      @include mixins.respond(tab-port) {
+        margin-bottom: var.$gap-1;
+      }
+    }
+    p {
+      @include mixins.respond(tab-port) {
+        width: 42ch;
+        margin-bottom: var.$gap-3;
+      }
+      @include mixins.respond(phone) {
+        width: 100%;
+      }
     }
   }
   &__form {
@@ -33,5 +48,9 @@
     // width: 75%;
     margin: 0 auto;
     overflow: hidden;
+
+    @include mixins.respond(phone) {
+      flex-direction: column;
+    }
   }
 }

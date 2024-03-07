@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { CustomCursorContext } from "../../context/customCursor/customCursor.context";
 import { useFollowMouse } from "../../hooks/useFollowMouse";
 import { customCursorVariants } from "../../libs/motion/motion.variants";
+import "./CustomCursor.scss";
 
 const CustomCursor = () => {
   const { cursorVariant } = useContext(CustomCursorContext);
@@ -11,13 +12,12 @@ const CustomCursor = () => {
 
   return (
     <motion.div
-      className="customCursor color--primary flex flex--center text--center pos--fixed z--full width--2 height--2 bg--light border--rad-full pointer-events--none"
+      className="customCursor color--dark bg--primary-4  "
       variants={customCursorVariants}
       animate={customCursorVariants[cursorVariant]}
       style={{
         translateX: cursorXSpring,
         translateY: cursroYSpring,
-        fontSize: "6px",
       }}
     >
       {cursorVariant === "project" ? "view" : ""}

@@ -5,8 +5,11 @@ import Footer from "./layouts/Footer/Footer";
 import Contact from "./routes/Contact";
 import { CustomCursorProvider } from "./context/customCursor/customCursor.context";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
+import Process from "./routes/Process";
+import { useScrollTop } from "./hooks/useScrollTop";
 
 function App() {
+  useScrollTop();
   return (
     <>
       <CustomCursorProvider>
@@ -16,6 +19,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/process" element={<Process />} />
         </Routes>
         <Footer />
       </CustomCursorProvider>

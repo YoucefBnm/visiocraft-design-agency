@@ -1,3 +1,4 @@
+import ReactLenis from "@studio-freight/react-lenis";
 import { CalculatorProvider } from "../context/calculator/calculator.context";
 import About from "../layouts/About/About";
 import Accomplishment from "../layouts/Accomplishment/Accomplishment";
@@ -9,7 +10,7 @@ import Showcase from "../layouts/Showcase/Showcase";
 
 const Home = () => {
   return (
-    <main>
+    <ReactLenis root options={{ duration: 5 }}>
       <Hero />
       <About />
       <Services />
@@ -19,7 +20,7 @@ const Home = () => {
       <CalculatorProvider>
         <Pricing />
       </CalculatorProvider>
-    </main>
+    </ReactLenis>
   );
 };
 

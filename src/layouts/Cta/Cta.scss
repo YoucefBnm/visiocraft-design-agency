@@ -2,14 +2,16 @@
 @use "../../sass/mixins";
 
 .cta {
-  margin-bottom: 15rem;
+  position: relative;
+  padding: var.$gap-8 0;
   &__container {
-    height: 100rem;
+    height: 110rem;
     position: relative;
     overflow: hidden;
   }
   &__images {
     // position: sticky;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -19,25 +21,37 @@
 
     picture {
       vertical-align: middle;
+      width: 100%;
       img {
         vertical-align: middle;
+        width: 100%;
+        height: auto;
       }
     }
   }
   &__text {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    // background-color: red;
+    // height: 85vh;
+    top: 6rem;
+    bottom: 0;
+    @include mixins.flex-center;
+  }
+  &__text-wrap {
     @include mixins.flex-col;
     @include mixins.flex-center;
     gap: var.$gap-2;
-    z-index: 2;
     width: 50%;
-    position: sticky;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
+    margin: 0 auto;
+    text-align: center;
     @include mixins.respond(tab-port) {
-      width: 80%;
-      left: 10%;
-      translate: -0% -50%;
+      width: 90%;
+
+      .h {
+        font-size: 1.7em;
+      }
     }
   }
 }

@@ -2,7 +2,8 @@
 @use "../../sass/mixins";
 
 .hero {
-  height: 500rem;
+  // height: 500rem;
+  height: 150rem;
   position: relative;
 
   &__container {
@@ -12,6 +13,7 @@
     bottom: 0;
     min-height: 100vh;
     overflow: hidden;
+    padding: var.$gap-4 0;
   }
   &__text {
     padding: var.$gap-1 var.$gap-4;
@@ -25,11 +27,14 @@
     }
     @include mixins.respond(tab-port) {
       .h--1 {
-        font-size: 5.8rem;
+        font-size: 4.8rem;
       }
     }
     p {
       width: 36ch;
+      @include mixins.respond(tab-port) {
+        width: 100%;
+      }
     }
   }
   &__video {

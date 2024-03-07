@@ -13,7 +13,10 @@ const Pricing = () => {
     <section id="pricing" className="pricing pad--x-lg">
       <div className="pricing__container">
         <StaggerContainer direction={-1} className="pricing__text">
-          <motion.h5 variants={fadeVariants("top")} className="h h--5">
+          <motion.h5
+            variants={fadeVariants("top")}
+            className="h h--5 color--primary"
+          >
             {lead}
           </motion.h5>
           <motion.h3 variants={fadeVariants("top")} className="h h--3">

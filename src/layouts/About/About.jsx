@@ -29,7 +29,7 @@ const About = () => {
       <StaggerContainer className="about__container">
         <motion.h4
           variants={fadeVariants("left")}
-          className="h h--3 color--light"
+          className="h h--3 color--primary-3"
         >
           who are we
         </motion.h4>

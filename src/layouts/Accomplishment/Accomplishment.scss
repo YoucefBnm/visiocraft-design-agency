@@ -4,8 +4,10 @@
 .accomplishment {
   position: relative;
   height: 200rem;
-  margin: 15rem 0;
+  // margin: 15rem 0;
+
   &__container {
+    overflow: hidden;
     min-height: 100vh;
     position: sticky;
     top: 3rem;
@@ -13,7 +15,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1.6rem 1fr 1.6rem 1fr 1.6rem;
+    grid-template-rows: 1.6rem 24rem 1.6rem 24rem 1.6rem;
     gap: var.$gap-2;
 
     @include mixins.respond(tab-port) {

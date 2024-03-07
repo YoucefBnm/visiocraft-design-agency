@@ -1,0 +1,13 @@
+@use "../../sass/mixins";
+
+.customCursor {
+  @include mixins.flex-center;
+  text-align: center;
+  position: fixed;
+  z-index: 99999;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 99999px;
+  pointer-events: none;
+  font-size: 6px;
+}

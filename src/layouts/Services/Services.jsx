@@ -30,14 +30,11 @@ const Services = () => {
       <div className="services__container pad--x-lg pad--y-lg">
         <div id="services-tabs" className="services__tabs">
           {services.map((service, index) => (
-            <div
-              className="services__tab inline-block"
-              key={`${service.id}-${service}`}
-            >
+            <div className="services__tab" key={`${service.id}-${service}`}>
               <motion.h4
-                className="h bg--dark"
+                className="h bg--dark color--light"
                 style={
-                  index === currentScrollY ? { opacity: 1 } : { opacity: 0.2 }
+                  index === currentScrollY ? { opacity: 0.8 } : { opacity: 0.2 }
                 }
               >
                 {service.mainTitle}
@@ -66,7 +63,7 @@ const Services = () => {
                 key={`${service.id}-${index}`}
                 className="services__card"
               >
-                <h4 className="h h--4 color--light">{service.subTitle}</h4>
+                <h4 className="h h--4 color--primary">{service.subTitle}</h4>
                 <p className="text--sm">{service.paragraph}</p>
               </motion.div>
             ))}
