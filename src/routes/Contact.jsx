@@ -1,4 +1,5 @@
 import { InlineWidget } from "react-calendly";
+import RouteTransition from "../hoc/RouteTransition";
 
 const Contact = () => {
   return (
@@ -8,4 +9,6 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+const AsyncContact = RouteTransition(Contact);
+
+export default AsyncContact;

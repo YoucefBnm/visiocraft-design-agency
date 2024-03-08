@@ -313,7 +313,7 @@ export const accomplishmentContent = [
   },
   {
     id: "accomplishment-staff",
-    title: "enthousiastes",
+    title: "creative mindes",
     number: "+15",
   },
   {

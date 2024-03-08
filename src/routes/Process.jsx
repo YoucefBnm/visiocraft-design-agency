@@ -1,5 +1,6 @@
 import ReactLenis from "@studio-freight/react-lenis";
 import ProcessWrap from "../layouts/ProcessWrap/ProcessWrap";
+import RouteTransition from "../hoc/RouteTransition";
 
 const Process = () => {
   return (
@@ -9,4 +10,5 @@ const Process = () => {
   );
 };
 
-export default Process;
+const AsyncProcess = RouteTransition(Process);
+export default AsyncProcess;

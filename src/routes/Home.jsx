@@ -7,6 +7,7 @@ import Hero from "../layouts/Hero/Hero";
 import Pricing from "../layouts/Pricing/Pricing";
 import Services from "../layouts/Services/Services";
 import Showcase from "../layouts/Showcase/Showcase";
+import RouteTransition from "../hoc/RouteTransition";
 
 const Home = () => {
   return (
@@ -24,4 +25,6 @@ const Home = () => {
   );
 };
 
-export default Home;
+const AsyncHome = RouteTransition(Home);
+
+export default AsyncHome;

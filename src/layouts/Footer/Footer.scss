@@ -11,8 +11,9 @@
   justify-content: space-between;
   gap: var.$gap-4;
   border-top: 1px solid lighten(var.$color-dark, 10%);
-
+  overflow: hidden;
   &__logo {
+    overflow: hidden;
     text-align: center;
     @include mixins.respond(phone) {
       width: 100%;

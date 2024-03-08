@@ -1,12 +1,15 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./routes/Home";
 import Navbar from "./layouts/Navbar/Navbar";
 import Footer from "./layouts/Footer/Footer";
-import Contact from "./routes/Contact";
 import { CustomCursorProvider } from "./context/customCursor/customCursor.context";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
-import Process from "./routes/Process";
 import { useScrollTop } from "./hooks/useScrollTop";
+import { Suspense, lazy } from "react";
+import { AnimatePresence } from "framer-motion";
+
+const Home = lazy(() => import("./routes/Home"));
+const Contact = lazy(() => import("./routes/Contact"));
+const Process = lazy(() => import("./routes/Process"));
 
 function App() {
   useScrollTop();
@@ -16,11 +19,34 @@ function App() {
         <CustomCursor />
 
         <Navbar />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/process" element={<Process />} />
-        </Routes>
+        <AnimatePresence>
+          <Routes>
+            <Route
+              index
+              element={
+                <Suspense fallback="loading">
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <Suspense fallback="loading">
+                  <Contact />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/process"
+              element={
+                <Suspense fallback="loading">
+                  <Process />
+                </Suspense>
+              }
+            />
+          </Routes>
+        </AnimatePresence>
         <Footer />
       </CustomCursorProvider>
     </>
