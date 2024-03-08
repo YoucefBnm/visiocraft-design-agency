@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import LogoImage from "../../components/Logoimage/LogoImage";
 import "./Navbar.scss";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const navigateToContact = () => navigate("/contact");
+
   return (
     <header className="navbar pad--x-lg">
       <Link
@@ -14,14 +17,13 @@ const Navbar = () => {
         <LogoImage />
       </Link>
 
-      <Button type="button" variant={"bg btn--bg--primary"}>
-        <Link
-          className="vertical--middle"
-          to="/contact"
-          aria-label="navigate to contact page"
-        >
-          Let&rsquo;s Talk
-        </Link>
+      <Button
+        aria-label="navigate to contact page"
+        type="button"
+        variant={"bg btn--bg--primary"}
+        handleClick={navigateToContact}
+      >
+        Let&rsquo;s Talk
       </Button>
     </header>
   );

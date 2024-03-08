@@ -6,6 +6,7 @@ import CustomCursor from "./components/CustomCursor/CustomCursor";
 import { useScrollTop } from "./hooks/useScrollTop";
 import { Suspense, lazy } from "react";
 import { AnimatePresence } from "framer-motion";
+import Loader from "./components/Loader/Loader";
 
 const Home = lazy(() => import("./routes/Home"));
 const Contact = lazy(() => import("./routes/Contact"));
@@ -13,6 +14,7 @@ const Process = lazy(() => import("./routes/Process"));
 
 function App() {
   useScrollTop();
+
   return (
     <>
       <CustomCursorProvider>
@@ -24,7 +26,7 @@ function App() {
             <Route
               index
               element={
-                <Suspense fallback="loading">
+                <Suspense fallback={<Loader />}>
                   <Home />
                 </Suspense>
               }
@@ -32,7 +34,7 @@ function App() {
             <Route
               path="/contact"
               element={
-                <Suspense fallback="loading">
+                <Suspense fallback={<Loader />}>
                   <Contact />
                 </Suspense>
               }
@@ -40,7 +42,7 @@ function App() {
             <Route
               path="/process"
               element={
-                <Suspense fallback="loading">
+                <Suspense fallback={<Loader />}>
                   <Process />
                 </Suspense>
               }
