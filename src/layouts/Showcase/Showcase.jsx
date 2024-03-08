@@ -33,17 +33,14 @@ const Showcase = () => {
                 srcSet={ShowcaseImageMd}
                 width={850}
                 height={615}
-                className="width--100"
               />
               <source
                 media="(max-width: 600px)"
                 srcSet={ShowcaseImageSm}
                 width={600}
                 height={515}
-                className="width--100"
               />
               <img
-                className="width--100"
                 width={1240}
                 height={615}
                 alt="showcase"

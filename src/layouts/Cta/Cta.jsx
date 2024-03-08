@@ -60,6 +60,7 @@ const Cta = () => {
                   height={304}
                   src={image.image}
                   loading="lazy"
+                  alt="visiocraft project"
                 />
               </picture>
             </motion.div>
