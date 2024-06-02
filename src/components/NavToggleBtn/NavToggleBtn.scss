@@ -1,0 +1,41 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.navToggle {
+  position: relative;
+  &__wrap {
+    @include mixins.flex-center;
+  }
+  &__btn {
+    padding: 0.625rem;
+    border-radius: 99999px;
+    color: var.$color-light;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    appearance: none;
+    background: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+  &__sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  &__line {
+    width: 2.25rem;
+    height: 0.225rem;
+    position: absolute;
+    background-color: currentColor;
+    display: inline-block;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    transition-duration: 1s;
+    transition-property: transform;
+  }
+}

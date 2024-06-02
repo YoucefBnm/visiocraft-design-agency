@@ -1,0 +1,83 @@
+@use "./var";
+@use "./mixins";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: var.$font-body;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
+}
+body {
+  font-family: var.$font-body;
+  font-weight: 400;
+  font-size: var.$text-base;
+  line-height: 1.4;
+  color: var.$color-primary;
+  @include mixins.bg-dark;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+button,
+input,
+textarea,
+label {
+  appearance: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  background: none;
+  user-select: none;
+  color: inherit;
+}
+
+@media (hover: hover) {
+  body,
+  body a,
+  body button,
+  body input,
+  html,
+  html a,
+  html button,
+  html input {
+    // cursor: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  body a,
+  body button,
+  body input,
+  html,
+  html a,
+  html button,
+  html input {
+    cursor: none;
+  }
+}

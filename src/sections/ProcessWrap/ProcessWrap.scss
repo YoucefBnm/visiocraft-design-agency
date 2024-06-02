@@ -1,0 +1,59 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.process {
+  position: relative;
+  &__container {
+    position: relative;
+    padding: 8rem 4.8rem;
+    @include mixins.respond(tab-port) {
+      padding-right: 3.2rem;
+      padding-left: 3.2rem;
+    }
+    @include mixins.respond(phone) {
+      padding-right: 2.4rem;
+      padding-left: 2.4rem;
+    }
+  }
+  &__card {
+    &:first-of-type {
+      min-height: calc(100svh - var.$header-height);
+    }
+    width: 100%;
+    min-height: calc(65svh - var.$header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__step {
+    font-size: clamp(6.4rem, 8vw + 3.35rem, 16rem);
+    color: var.$color-primary-200;
+  }
+  &__content {
+    @include mixins.flex-col;
+    justify-content: center;
+    flex-basis: 65%;
+  }
+  &__titleSub {
+    color: var.$color-secondary;
+    margin-bottom: 0.8rem;
+  }
+  &__titleMain {
+    margin-bottom: 1.6rem;
+  }
+  &__desc {
+    color: rgba(var.$color-light, 0.85);
+  }
+
+  &__progress {
+    position: absolute;
+    top: 0;
+    right: calc(65% + 2rem);
+    height: 100%;
+    width: 2.4rem;
+    text-align: center;
+    width: 0.3rem;
+    background-color: var.$color-secondary;
+    transform-origin: top;
+  }
+}

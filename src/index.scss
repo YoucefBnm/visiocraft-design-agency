@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Space Grotesk", sans-serif;
+  src: url(./assets/fonts/SpaceGrotesk-Medium.ttf) format(ttf);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  src: url(./assets/fonts/OpenSans_Condensed-Regular.ttf) format(ttf);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-variation-settings: "wdth" 100;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@import "./sass/typography";
+@import "./sass/base";
+@import "./sass/inputs";

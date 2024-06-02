@@ -1,0 +1,65 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.work {
+  position: relative;
+  background-color: var.$color-accent;
+
+  &__container {
+    position: relative;
+    width: 100%;
+    padding: 0 4.8rem;
+    @include mixins.respond(tab-port) {
+      padding: 0 1.6rem;
+    }
+  }
+
+  &__project {
+    overflow: hidden;
+    @include mixins.bg-light;
+    height: calc(100svh - 3.2rem);
+    border-radius: 1.6rem;
+    @include mixins.pos-sticky;
+    top: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 6;
+    padding-bottom: 1.6rem;
+    width: 100%;
+    gap: 1.6rem;
+    @include mixins.respond(tab-port) {
+      height: calc(100svh - var.$header-height);
+      top: var.$header-height;
+    }
+    &--header {
+      padding: 3.2rem 0 1.6rem 0;
+      margin: 0 2.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var.$color-accent;
+      @include mixins.respond(tab-port) {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+    }
+    &--tags {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    &--body {
+      @include mixins.flex-col;
+      gap: 1.6rem;
+      margin: 0 2.4rem;
+      img {
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

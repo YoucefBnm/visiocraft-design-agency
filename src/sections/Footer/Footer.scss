@@ -1,0 +1,30 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 3.2rem 4.8rem;
+    align-items: flex-end;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    border-top: 1px solid var.$color-primary-100;
+  }
+  &__logo {
+    margin-bottom: 0.8rem;
+  }
+  &__social {
+    display: flex;
+    gap: 1.6rem;
+    flex: 1;
+    justify-content: center;
+  }
+  &__infos {
+    display: flex;
+    gap: 1.6rem;
+  }
+  &__link {
+    text-transform: capitalize;
+  }
+}

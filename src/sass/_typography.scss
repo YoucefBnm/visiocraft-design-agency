@@ -1,0 +1,121 @@
+@use "./var";
+@use "./mixins";
+
+.font-body {
+  font-family: var.$font-body;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+.font-heading {
+  font-family: var.$font-heading;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+.display {
+  font-family: var.$font-heading;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  &--1 {
+    font-size: var.$display-3xl;
+  }
+  &--2 {
+    font-size: var.$display-2xl;
+  }
+  &--3 {
+    font-size: var.$display-xl;
+  }
+}
+
+.text {
+  &--base {
+    font-size: var.$text-base;
+  }
+  &--md {
+    font-size: var.$text-md;
+  }
+  &--xl {
+    font-size: var.$text-xl;
+  }
+  &--xs {
+    font-size: var.$text-xs;
+  }
+  &--primary {
+    color: var.$color-primary;
+    &--100 {
+      color: var.$color-primary-100;
+    }
+    &--200 {
+      color: var.$color-primary-200;
+    }
+    &--300 {
+      color: var.$color-primary-300;
+    }
+    &--capitalize {
+      text-transform: capitalize;
+    }
+  }
+
+  &--secondary {
+    color: var.$color-secondary;
+    &--100 {
+      color: var.$color-secondary-100;
+    }
+    &--200 {
+      color: var.$color-secondary-200;
+    }
+    &--300 {
+      color: var.$color-secondary-300;
+    }
+  }
+  &--accent {
+    color: var.$color-accent;
+    &--100 {
+      color: var.$color-accent-100;
+    }
+    &--200 {
+      color: var.$color-accent-200;
+    }
+    &--300 {
+      color: var.$color-accent-300;
+    }
+  }
+  &--light {
+    color: var.$color-light;
+  }
+}
+
+.anim {
+  overflow: hidden;
+  position: relative;
+  &--word {
+    overflow: hidden;
+    position: relative;
+    margin-right: 1vw;
+    display: inline-block;
+
+    span {
+      display: inline-block;
+      vertical-align: text-top;
+    }
+  }
+  &--char {
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+  }
+}
+
+.tag {
+  font: var.$font-heading;
+  font-size: var.$text-xs;
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  span {
+    vertical-align: text-top;
+    display: inline-block;
+  }
+}

@@ -1,0 +1,19 @@
+@use "../../sass/var";
+
+.alert {
+  border-radius: 0.8rem;
+  border: 1px solid currentColor;
+  background-color: var.$color-primary;
+  padding: 1.6rem 2.4rem;
+  flex-grow: 0;
+  max-width: 25rem;
+  span {
+    text-wrap: wrap;
+  }
+  &--success {
+    color: hsl(148, 100%, 62%);
+  }
+  &--danger {
+    color: hsl(356, 100%, 62%);
+  }
+}

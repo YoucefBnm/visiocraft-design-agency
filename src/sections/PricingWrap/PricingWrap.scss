@@ -1,0 +1,22 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.pricing {
+  &__container {
+    width: 80%;
+    margin: 4rem auto;
+
+    display: flex;
+    gap: 3.2rem;
+    justify-content: space-evenly;
+    background-color: rgba(var.$color-primary-100, 0.5);
+    border-radius: 8px;
+    border: 1px solid var.$color-primary-100;
+    padding: 3.2rem 2.4rem;
+    flex-wrap: wrap;
+
+    @include mixins.respond(tab-port) {
+      justify-content: flex-start;
+    }
+  }
+}

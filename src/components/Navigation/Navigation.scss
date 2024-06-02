@@ -1,0 +1,49 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+.navigation {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  overflow: hidden;
+  background-color: var.$color-primary-100;
+  color: var.$color-light;
+  &__container {
+    position: relative;
+    height: 100%;
+    padding-top: var.$header-height;
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    overflow: hidden;
+  }
+  &__wrap {
+    @include mixins.flex-col;
+    height: 100%;
+    padding: 3.2rem 0;
+    overflow: hidden;
+  }
+  &__items {
+    display: flow-root;
+    overflow: hidden;
+    @include mixins.flex-col;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__link {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    text-transform: capitalize;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var.$color-secondary;
+    }
+    a {
+      overflow: hidden;
+      display: inline-block;
+    }
+  }
+}
