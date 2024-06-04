@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
+import { useScrollToTop } from "../hooks/useScrollToTop";
 
 const RouteTransition = (Component) =>
   // const clipPathHidden = "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)";
   // const clipPathVisible = "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)";
 
   function Hoc() {
+    useScrollToTop();
+
     return (
       <>
         <Component />

@@ -12,7 +12,7 @@
     }
     @include mixins.respond(phone) {
       padding-right: 2.4rem;
-      padding-left: 2.4rem;
+      padding-left: 1.6rem;
     }
   }
   &__card {

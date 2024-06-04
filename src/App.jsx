@@ -4,6 +4,7 @@ import { CustomCursor } from "./components";
 import { CustomCursorProvider } from "./context/customCursor/customCursor.context";
 import { Suspense, lazy } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 
 const Home = lazy(() => import("./routes/Home"));
 const Portfolio = lazy(() => import("./routes/Portfolio"));
@@ -12,6 +13,7 @@ const Contact = lazy(() => import("./routes/Contact"));
 const Pricing = lazy(() => import("./routes/Pricing"));
 
 function App() {
+  useScrollToTop();
   return (
     <Suspense>
       <CustomCursorProvider>

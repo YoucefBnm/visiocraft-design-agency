@@ -1,4 +1,5 @@
 @use "./var";
+@use "./mixins";
 
 .input {
   overflow: hidden;
@@ -106,6 +107,9 @@
     transition: 0.2s ease outline;
     background: transparent;
     min-width: 25rem;
+    @include mixins.respond(phone) {
+      min-width: 100%;
+    }
     &:focus {
       outline: 1px ridge var.$color-secondary;
     }
