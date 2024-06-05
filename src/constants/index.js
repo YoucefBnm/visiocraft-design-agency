@@ -40,8 +40,9 @@ export const heroGalleryImages = {
   ],
   bizadvisor: [
     BizAdvisorCtaImage,
-    BizAdvisorHeroImage,
     BizAdvisorAboutImage,
+
+    BizAdvisorHeroImage,
     BizAdvisorHero2Image,
   ],
   visiocraft: [
@@ -154,16 +155,17 @@ export const ctaImages = [
     imageUrl: ActifeetHeroImage,
   },
   {
-    id: "cta-bizadvisor-about",
-    imageUrl: BizAdvisorAboutImage,
+    id: "cta-bizadvisor-hero",
+    imageUrl: BizAdvisorHeroImage,
   },
   {
     id: "cta-bizadvisor-cta",
     imageUrl: KatadisyCta,
   },
+
   {
-    id: "cta-bizadvisor-hero",
-    imageUrl: BizAdvisorHeroImage,
+    id: "cta-bizadvisor-about",
+    imageUrl: BizAdvisorAboutImage,
   },
 ];
 
