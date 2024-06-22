@@ -233,31 +233,31 @@ export const pricing = {
       id: "price-sub-pages",
       title: "pages",
       price: 100,
-      value: 1,
+      value: 0,
     },
     {
       id: "price-sub-sections",
       title: "sections",
       price: 20,
-      value: 1,
+      value: 0,
     },
     {
       id: "price-sub-products",
       title: "products",
       price: 50,
-      value: 1,
+      value: 0,
     },
     {
       id: "price-sub-portfolios",
       title: "portfolios",
       price: 50,
-      value: 1,
+      value: 0,
     },
     // {
     //     id: 'price-sub-listings',
     //     title: 'number of listings',
     //     price: 50,
-    //     value: 1,
+    //     value: 0,
     // }
   ],
   additionnalServices: [

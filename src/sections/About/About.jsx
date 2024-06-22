@@ -6,9 +6,10 @@ import { AnimatedText, Button } from "../../components";
 import { memo } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Character = memo(function Character({ children, style }) {
+const Character = memo(function Character({ children, progress, range }) {
+  const opacity = useTransform(progress, range, [0.02, 1]);
   return (
-    <motion.span style={style} className="anim--char">
+    <motion.span style={{ opacity }} className="anim--char">
       {children}
     </motion.span>
   );
@@ -19,7 +20,6 @@ const Word = memo(function Word({ children, range, progress }) {
   const amount = range[1] - range[0];
   const step = amount / children.length;
 
-  const opacity = useTransform(progress, range, [0.05, 1]);
   return (
     <span className="anim--word">
       {characters.map((char, index) => {
@@ -30,7 +30,6 @@ const Word = memo(function Word({ children, range, progress }) {
           <Character
             key={`${char}-${index}`}
             range={[start, end]}
-            style={{ opacity }}
             progress={progress}
           >
             {char}
