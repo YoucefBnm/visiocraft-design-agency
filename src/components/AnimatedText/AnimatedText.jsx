@@ -1,53 +1,47 @@
 import { motion } from "framer-motion";
-import { memo } from "react";
 import { fadeVariants } from "../../utils/motion/motion.variants";
 import { useRevealAnimation } from "../../hooks/useRevealAnimation";
 
-const Character = memo(function Character({ children, direction }) {
+const Word = ({ word, style }) => {
+  const characters = word.split("");
+
   return (
     <motion.span
-      className="anim--char"
-      variants={fadeVariants(direction)}
-      transition={{
-        damping: 600,
-      }}
+      style={style}
+      className="anim--word"
+      transition={{ staggerChildren: 0.01 }}
     >
-      {children}
+      {characters.map((char, index) => (
+        <motion.span
+          key={`${char}-${index}`}
+          className="anim--char"
+          variants={fadeVariants("bottom")}
+          transition={{ type: "spring", damping: 20, mass: 2 }}
+        >
+          {char}
+        </motion.span>
+      ))}
+      &nbsp;
     </motion.span>
   );
-});
+};
 
-const Word = memo(function Word({ children, className, direction }) {
-  const characters = children.split("");
-  const { isInView, targetRef } = useRevealAnimation();
+const AnimatedText = ({ text, className, style }) => {
+  const words = text.split(" ");
+  const { revealRef, isInView } = useRevealAnimation();
 
   return (
     <motion.div
-      className={`anim--word ${className}`}
-      ref={targetRef}
+      ref={revealRef}
+      transition={{ staggerChildren: 0.1 }}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      transition={{ delayChildren: 0.5, staggerChildren: 0.1 }}
+      className={`anim ${className}`}
     >
-      {characters.map((char, index) => (
-        <Character key={`${char}-${index}`} direction={direction}>
-          {char}
-        </Character>
+      {words.map((word, index) => (
+        <Word style={style} key={`${word}-${index}`} word={word} />
       ))}
     </motion.div>
-  );
-});
-
-const AnimatedText = ({ text, className, direction, style }) => {
-  const words = text.split(" ");
-  return (
-    <motion.span style={style} className={`anim ${className}`}>
-      {words.map((word, index) => (
-        <Word direction={direction} key={`${word}${index}`}>
-          {word}
-        </Word>
-      ))}
-    </motion.span>
   );
 };
 

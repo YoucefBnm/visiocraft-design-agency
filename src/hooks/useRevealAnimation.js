@@ -2,15 +2,15 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 export function useRevealAnimation() {
-  const targetRef = useRef(null);
+  const revealRef = useRef(null);
 
-  const isInView = useInView(targetRef, {
+  const isInView = useInView(revealRef, {
     once: true,
     amount: "some",
   });
 
   return {
-    targetRef,
+    revealRef,
     isInView,
   };
 }

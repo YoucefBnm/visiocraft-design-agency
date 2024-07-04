@@ -75,5 +75,10 @@
       color: var.$color-primary;
       border-color: var.$color-secondary-200;
     }
+    &--accent {
+      background-color: var.$color-accent;
+      color: var.$color-light;
+      border-color: var.$color-accent;
+    }
   }
 }

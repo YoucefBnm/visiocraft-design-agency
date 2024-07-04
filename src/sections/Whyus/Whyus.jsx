@@ -114,11 +114,11 @@ const WhyusImage = ({
 };
 
 const Whyus = () => {
-  const { targetRef, scrollYProgress } = useScrollAnimation();
+  const { scrollRef, scrollYProgress } = useScrollAnimation();
 
   return (
     <section className="whyus" id="whyus">
-      <div ref={targetRef} className="whyus__container">
+      <div ref={scrollRef} className="whyus__container">
         <div className="whyus__wrap">
           <div className="whyus__col-md">
             {whyusContent.map((item, index) => {

@@ -1,17 +1,19 @@
 import { Suspense } from "react";
-import { HeroText } from "../components";
 import RouteTransition from "../hoc/RouteTransition";
 import { PricingWrap } from "../sections";
+import { pricingText } from "../constants";
+import { HeroWrap } from "../components";
+import { HeroDescription, HeroTitle } from "../components/HeroWrap/HeroWrap";
 
 const Pricing = () => {
+  const { title, description } = pricingText;
+
   return (
     <Suspense>
-      <HeroText
-        title={"Ready to transform your online presence"}
-        description={
-          "Starting from 650$, our design services are for everyone from small, mid-size to large businisses."
-        }
-      />
+      <HeroWrap title={title} description={description}>
+        <HeroDescription />
+        <HeroTitle />
+      </HeroWrap>
 
       <PricingWrap />
     </Suspense>

@@ -70,10 +70,10 @@ function renderCtaImage(item, index, progress) {
   );
 }
 const Cta = () => {
-  const { targetRef, scrollYProgress } = useScrollAnimation();
+  const { scrollRef, scrollYProgress } = useScrollAnimation();
   return (
     <section className="cta" id="cta">
-      <div ref={targetRef} className="cta__container">
+      <div ref={scrollRef} className="cta__container">
         <div className="cta__wrap">
           <div className="cta__gallery">
             {ctaImages.map((item, index) =>

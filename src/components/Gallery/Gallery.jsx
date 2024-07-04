@@ -34,7 +34,7 @@ const GalleryCol = ({ images, progress, order }) => {
 
 const Gallery = () => {
   const { actifeet, bizadvisor, visiocraft } = heroGalleryImages;
-  const { targetRef, scrollYProgress } = useScrollAnimation();
+  const { scrollRef, scrollYProgress } = useScrollAnimation();
 
   const scale = useTransform(scrollYProgress, [0, 0.8], [1.2, 1]);
   const clipPath = useTransform(
@@ -44,7 +44,7 @@ const Gallery = () => {
   );
 
   return (
-    <div ref={targetRef} className="gallery">
+    <div ref={scrollRef} className="gallery">
       <div className="gallery__container">
         <motion.div style={{ clipPath }} className="gallery__wrap">
           <motion.div style={{ scale }} className="gallery__items">

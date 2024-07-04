@@ -89,10 +89,13 @@
 .anim {
   overflow: hidden;
   position: relative;
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
   &--word {
     overflow: hidden;
     position: relative;
-    margin-right: 1vw;
+    // margin-right: 1vw;
     display: inline-block;
 
     span {
@@ -112,10 +115,16 @@
   font-size: var.$text-xs;
   text-transform: capitalize;
   line-height: 1;
-  padding: 2px 8px;
+  padding: 4px 12px;
   border-radius: 9999px;
+  display: inline-block;
+
   span {
     vertical-align: text-top;
     display: inline-block;
+  }
+  &--accent {
+    border: 1px solid var.$color-accent;
+    color: var.$color-accent;
   }
 }

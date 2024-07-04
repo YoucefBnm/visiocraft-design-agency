@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import "./Footer.scss";
 import { fadeVariants } from "../../utils/motion/motion.variants";
-import { StaggerContainer } from "../../components";
 import Logo from "../../assets/icons/logo.svg?react";
 import { socialLinks } from "../../constants";
 import { useContext } from "react";
 import { CustomCursorContext } from "../../context/customCursor/customCursor.context";
+import { useRevealAnimation } from "../../hooks/useRevealAnimation";
 
 const Footer = () => {
   const { setCursorVariant } = useContext(CustomCursorContext);
@@ -13,10 +13,15 @@ const Footer = () => {
   const handleMouseIn = () => setCursorVariant("link");
   const handleMouseOut = () => setCursorVariant("default");
 
+  const { revealRef, isInView } = useRevealAnimation();
   return (
-    <footer className="footer">
+    <footer ref={revealRef} className="footer">
       <div className="footer__container">
-        <StaggerContainer>
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          transition={{ staggerChildren: 0.2 }}
+        >
           <motion.div
             variants={fadeVariants("bottom")}
             className="footer__logo"
@@ -29,9 +34,9 @@ const Footer = () => {
           >
             <strong>&copy;</strong>2024 developed by ycf dev.
           </motion.small>
-        </StaggerContainer>
+        </motion.div>
 
-        <StaggerContainer className={"footer__social"}>
+        <div className={"footer__social"}>
           {socialLinks.map((link) => (
             <motion.a
               onMouseEnter={handleMouseIn}
@@ -46,12 +51,12 @@ const Footer = () => {
               {link.title}
             </motion.a>
           ))}
-        </StaggerContainer>
+        </div>
 
-        <StaggerContainer className={"footer__infos text--secondary"}>
+        <div className={"footer__infos text--secondary"}>
           <motion.a href="tel:+213777915747">+213 777 915 747</motion.a>
           <motion.a href="mailto:ssefbnm@gmail.com">ssefbnm@gmail.com</motion.a>
-        </StaggerContainer>
+        </div>
       </div>
     </footer>
   );

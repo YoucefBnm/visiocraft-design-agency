@@ -8,9 +8,7 @@ import ReactLenis from "@studio-freight/react-lenis";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <ReactLenis root options={{ smoothWheel: true }}>
-        <App />
-      </ReactLenis>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -31,6 +31,11 @@ export const heroContent = {
   // "Visiocraft Design agency specializing in web design and frontend development, we blend creativity, innovation, expertise to craft digital solutions.",
 };
 
+export const pricingText = {
+  title: "Ready to transform your online presence",
+  description:
+    "Starting from 650$, our design services are for everyone from small, mid-size to large businisses.",
+};
 export const heroGalleryImages = {
   actifeet: [
     ActifeetHero2Image,

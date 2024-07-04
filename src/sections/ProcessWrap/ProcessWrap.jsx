@@ -9,7 +9,7 @@ import AnimatedText from "../../components/AnimatedText/AnimatedText";
 const ProcessCard = memo(function ProcessCard({ phase }) {
   const { titleSub, titleMain, paragraph } = phase;
 
-  const { targetRef, isInView } = useRevealAnimation();
+  const { revealRef, isInView } = useRevealAnimation();
   return (
     <>
       <motion.div
@@ -41,7 +41,7 @@ const ProcessCard = memo(function ProcessCard({ phase }) {
           text={titleMain}
         />
         <motion.p
-          ref={targetRef}
+          ref={revealRef}
           className="process__desc"
           variants={fadeVariants()}
           transition={{ ease: "linear" }}
@@ -54,15 +54,15 @@ const ProcessCard = memo(function ProcessCard({ phase }) {
 });
 
 const ProcessWrap = () => {
-  const targetRef = useRef(null);
+  const revealRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    target: targetRef,
+    target: revealRef,
   });
 
   return (
     <section className="process">
-      <div ref={targetRef} className="process__container">
+      <div ref={revealRef} className="process__container">
         {processPhases.map((phase) => (
           <div className="process__card" key={phase.id}>
             <div className="process__step">

@@ -6,9 +6,10 @@
   &__container {
     @include mixins.scroll-container;
   }
+
   &__wrap {
     @include mixins.pos-sticky;
-    width: clamp(50%, 75%, 85%);
+    width: clamp(50%, 75%, 95%);
     margin: 0 auto;
     height: 100svh;
     display: flex;
@@ -17,21 +18,11 @@
   &__desc {
     margin-bottom: 1.6rem;
   }
-  &__text {
-    display: flex;
-    column-gap: 4.8rem;
-    justify-content: space-between;
-    @include mixins.respond(tab-port) {
-      flex-direction: column;
-      row-gap: 2.4rem;
-    }
-    .anim {
-      width: 100%;
-    }
-  }
+
   &__title {
-    display: block;
+    float: left;
     text-transform: uppercase;
-    font-weight: 700 !important;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
   }
 }

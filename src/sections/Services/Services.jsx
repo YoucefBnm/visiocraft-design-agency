@@ -20,12 +20,15 @@ const ServiceCard = ({
   const [isMouseIn, setIsMouseIn] = useState(false);
   const toggleIsMouseIn = () => setIsMouseIn((prevState) => !prevState);
 
-  const y = useTransform(progress, range, [100 * (order + 1), 0]);
+  const y = useTransform(progress, range, [50 * (order + 1), 0]);
 
   const clipPathVisible = "polygon(0 0,100% 0,100% 100%,0 100%)";
   const clipPathHidden = "polygon(50% 0,50% 0,50% 100%,50% 100%)";
 
   const { width } = useWindowSize();
+
+  const words = title.split(" ");
+  console.log(words);
   return (
     <motion.div
       className="card"
@@ -95,10 +98,10 @@ const ServiceCard = ({
 };
 
 const Services = () => {
-  const { targetRef, scrollYProgress } = useScrollAnimation();
+  const { scrollRef, scrollYProgress } = useScrollAnimation();
   return (
     <section className="services" id="services">
-      <div className="services__container" ref={targetRef}>
+      <div className="services__container" ref={scrollRef}>
         <div className="services__wrap">
           {services.map((service, index) => {
             const start = (index / services.length) * 0.4;

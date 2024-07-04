@@ -21,7 +21,7 @@ export const customCursorVariants = {
   },
   view: {
     scale: 1.7,
-    background: "#FFD23F",
+    background: "#f8f32b",
     mixBlendMode: "normal",
   },
   link: {
