@@ -104,7 +104,7 @@ const Services = () => {
       <div className="services__container" ref={scrollRef}>
         <div className="services__wrap">
           {services.map((service, index) => {
-            const start = (index / services.length) * 0.4;
+            const start = (index / services.length) * 0.6;
             const { id, imageUrl, title, description } = service;
             return (
               <ServiceCard
