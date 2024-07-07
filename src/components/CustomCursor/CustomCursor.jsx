@@ -3,7 +3,6 @@ import "./CustomCursor.scss";
 import {
   customCursorTextVariants,
   customCursorVariants,
-  customCursorWrapVariants,
 } from "../../utils/motion/motion.variants";
 import { useContext } from "react";
 import { CustomCursorContext } from "../../context/customCursor/customCursor.context";
@@ -17,20 +16,17 @@ const CustomCursor = () => {
     <motion.div
       className="customCursor"
       variants={customCursorVariants}
-      animate={customCursorVariants[cursorVariant]}
+      animate={cursorVariant}
       style={{
         translateX: cursorXSpring,
         translateY: cursroYSpring,
       }}
     >
-      <motion.div
-        className="customCursor__wrap"
-        animate={customCursorWrapVariants[cursorVariant]}
-      >
+      <motion.div className="customCursor__wrap" animate={cursorVariant}>
         <span className="customCursor__text">
           <motion.span
             variants={customCursorTextVariants}
-            animate={customCursorTextVariants[cursorVariant]}
+            animate={cursorVariant}
           >
             {customCursorTextVariants[cursorVariant]["text"]}
           </motion.span>
