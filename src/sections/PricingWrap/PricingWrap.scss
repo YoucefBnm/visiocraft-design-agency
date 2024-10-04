@@ -1,0 +1,21 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.pricing {
+  &__container {
+    width: 80%;
+    margin: 4.8rem auto;
+    display: flex;
+    gap: 3.2rem;
+    justify-content: space-evenly;
+    border-radius: 1.6rem;
+    border: 1px solid var.$color-primary-100;
+    @include mixins.bg-dark;
+    padding: 3.2rem 2.4rem;
+    flex-wrap: wrap;
+
+    @include mixins.respond(phone) {
+      width: 90%;
+    }
+  }
+}

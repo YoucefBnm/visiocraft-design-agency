@@ -1,0 +1,21 @@
+@use "../../sass/mixins";
+
+.nav {
+  height: 100%;
+  padding: 10rem 4rem 5rem 4rem;
+  &__item {
+    overflow: hidden;
+  }
+  &__link {
+    perspective: 100px;
+    perspective-origin: bottom;
+    .perspectiveText {
+      display: inline-block;
+    }
+  }
+  &__list {
+    @include mixins.flex-col;
+    gap: 1.6rem;
+    text-transform: uppercase;
+  }
+}

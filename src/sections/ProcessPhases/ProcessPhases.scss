@@ -1,0 +1,9 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.processPhases {
+  padding-top: 4.8rem;
+  padding-bottom: 4.8rem;
+  @include mixins.bg-dark;
+  @include mixins.px-default;
+}

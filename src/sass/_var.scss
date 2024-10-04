@@ -1,0 +1,37 @@
+@use "sass:color";
+
+$font-heading: "Schibsted Grotesk", sans-serif;
+$font-body: "Inter", sans-serif;
+
+$text-xs: clamp(1rem, 0.25vw + 1rem, 1.4rem);
+$text-base: clamp(1.13rem, 0.47vw + 1.2rem, 1.5rem);
+$text-md: clamp(1.38rem, 0.78vw + 1.29rem, 1.85rem);
+$text-xl: clamp(2.5rem, 1.25vw + 2rem, 3.5rem);
+
+$display-xl: clamp(1.75rem, 1.25vw + 1.25rem, 2.75rem);
+$display-2xl: clamp(2.75rem, 2.81vw + 1.43rem, 5rem);
+$display-3xl: clamp(3.2rem, 5.42vw + 1.95rem, 9.6rem);
+
+$color-light: #fdfef5;
+$color-light-600: color.scale($color-light, $lightness: -10%);
+$color-light-700: color.scale($color-light, $lightness: -20%);
+$color-light-800: color.scale($color-light, $lightness: -30%);
+$color-dark: #252d29;
+$color-dark-100: color.scale($color-dark, $lightness: 10%);
+$color-dark-200: color.scale($color-dark, $lightness: 20%);
+$color-dark-300: color.scale($color-dark, $lightness: 30%);
+
+$color-primary: hsl(69, 88%, 64%);
+$color-primary-100: color.scale($color-primary, $lightness: 10%);
+$color-primary-200: color.scale($color-primary, $lightness: 20%);
+$color-primary-300: color.scale($color-primary, $lightness: 30%);
+$color-primary-400: color.scale($color-primary, $lightness: 40%);
+$color-primary-600: color.scale($color-primary, $lightness: -10%);
+$color-primary-700: color.scale($color-primary, $lightness: -20%);
+$color-primary-800: color.scale($color-primary, $lightness: -30%);
+$color-primary-900: color.scale($color-primary, $lightness: -10%);
+$color-danger: hsl(17, 88%, 64%);
+$header-height: 6rem;
+
+$input-shadow: inset 1px 2px 4px $color-dark;
+$input-range-height: 1.85rem;

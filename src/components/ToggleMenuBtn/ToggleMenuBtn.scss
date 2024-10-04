@@ -1,0 +1,32 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.toggleMenuBtn {
+  height: 4rem;
+  width: 10rem;
+  @include mixins.bg-dark;
+  box-shadow: inset 1px 2px 4px rgba(var.$color-primary, 0.5);
+  border-radius: 9999px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+
+  &__slider {
+    position: relative;
+    height: 100%;
+  }
+  &__copy {
+    height: 100%;
+    width: 100%;
+    &:nth-of-type(2) {
+      position: absolute;
+      top: 100%;
+      background-color: var.$color-dark;
+      color: var.$color-light;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+}

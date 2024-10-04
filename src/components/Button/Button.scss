@@ -1,0 +1,59 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.btn {
+  display: inline-flex;
+  place-content: center;
+  white-space: nowrap;
+  transition: background-color 0.4s ease-in-out;
+  position: relative;
+  a {
+    display: block;
+  }
+
+  &--link {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0.6rem;
+      right: 0.6rem;
+      bottom: 0;
+      height: 0.095rem;
+      background-color: currentColor;
+    }
+    &::before {
+      transform-origin: left;
+      transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.25s;
+    }
+    &::after {
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+    }
+    &:hover {
+      &::before {
+        transform: scaleX(0);
+      }
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  &--bg {
+    height: 3.985rem;
+    border-radius: 9999px;
+    padding: 0 2.4rem;
+
+    &--primary {
+      @include mixins.bg-primary;
+      box-shadow: inset 1px 2px 4px rgba(var.$color-dark-300, 0.25);
+    }
+    &--dark {
+      @include mixins.bg-dark;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

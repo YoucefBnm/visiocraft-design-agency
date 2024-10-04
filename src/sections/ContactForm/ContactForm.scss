@@ -1,0 +1,15 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.form {
+  @include mixins.flex-col;
+  align-items: flex-start;
+  //   flex: 1;
+  justify-content: center;
+  gap: 2.4rem;
+  min-height: 51.5rem;
+
+  &__alert {
+    overflow: hidden;
+  }
+}

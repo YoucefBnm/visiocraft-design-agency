@@ -1,0 +1,86 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.services {
+  position: relative;
+
+  &__container {
+    position: relative;
+  }
+  &__wrap {
+    @include mixins.pos-sticky;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    @include mixins.respond(tab-port) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.card {
+  overflow: hidden;
+  @include mixins.flex-col;
+  // flex: 1;
+  position: relative;
+  top: 0;
+  min-height: 100shv;
+  @include mixins.bg-dark;
+  @include mixins.respond(tab-port) {
+    // flex-direction: row;
+    // max-height: 100%;
+    // min-height: fit-content;
+  }
+  &__pic {
+    order: 2;
+    overflow: hidden;
+    @include mixins.respond(tab-port) {
+      // display: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1024 / 640;
+    }
+  }
+  &__title {
+    overflow: hidden;
+    display: block;
+    .anim {
+      @include mixins.flex-col;
+    }
+  }
+
+  &__content {
+    // padding: 3.2rem 2.4rem;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    padding-left: clamp(2.4rem, 3.2rem, 4.8rem);
+    padding-right: clamp(2.4rem, 3.2rem, 4.8rem);
+
+    position: relative;
+    @include mixins.flex-col;
+
+    justify-content: flex-end;
+    min-height: 22.1875rem;
+    flex-grow: 1;
+    z-index: 1;
+  }
+  &__desc {
+    @include mixins.flex-col;
+    padding-top: 3.2rem;
+    padding-bottom: 0.8rem;
+    justify-content: flex-end;
+    flex: 1;
+  }
+
+  &__bg {
+    @include mixins.absolute-full;
+    background-color: var.$color-light;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    @include mixins.respond(tab-port) {
+      display: none;
+    }
+  }
+}

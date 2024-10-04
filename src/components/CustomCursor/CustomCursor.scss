@@ -1,0 +1,41 @@
+@use "../../sass/var";
+
+.customCursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  border-radius: 50%;
+  display: none;
+  &__wrap {
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 0.043rem solid var.$color-light;
+    position: relative;
+    content: "";
+    border-radius: 50%;
+    display: flex;
+  }
+
+  &__text {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+    font-size: 0.6rem;
+    color: var.$color-primary;
+    text-transform: capitalize;
+    mix-blend-mode: difference;
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .customCursor {
+    display: block;
+  }
+}

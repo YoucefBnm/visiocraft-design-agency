@@ -1,0 +1,19 @@
+@use "../../sass/var";
+@use "../../sass/mixins";
+
+.header {
+  position: fixed;
+  top: 3.2rem;
+  // left: 4.8rem;
+  right: 2.4rem;
+  z-index: 9999;
+
+  &__menu {
+    position: relative;
+    // width: 48rem;
+    // height: 65rem;
+    background-color: var.$color-primary;
+    border-radius: 2.4rem;
+    right: 0;
+  }
+}
