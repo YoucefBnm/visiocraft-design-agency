@@ -4,7 +4,6 @@ import Gallery from "./Gallery/Gallery";
 import CustomCursor from "./CustomCursor/CustomCursor";
 import { HeroWrap } from "./HeroWrap/HeroWrap";
 import PerspectiveText from "./PerspectiveText/PerspectiveText";
-import ScrollCard from "./ScrollCard/ScrollCard";
 import StickyCard from "./StickyCard/StickyCard";
 import ToggleMenuBtn from "./ToggleMenuBtn/ToggleMenuBtn";
 import Nav from "./Nav/Nav";
@@ -22,7 +21,6 @@ export {
   Button,
   Gallery,
   CustomCursor,
-  ScrollCard,
   StickyCard,
   ToggleMenuBtn,
   Nav,

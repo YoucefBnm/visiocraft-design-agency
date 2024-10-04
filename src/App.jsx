@@ -6,6 +6,7 @@ import { lazy, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
 import RouteTransition from "./hoc/RouteTransition";
 import NotFound from "./routes/NotFound";
+import { HelmetProvider } from "react-helmet-async";
 
 const Home = lazy(() => import("./routes/Home"));
 const Process = lazy(() => import("./routes/Process"));
@@ -14,9 +15,9 @@ const Contact = lazy(() => import("./routes/Contact"));
 function App() {
   const location = useLocation();
   return (
-    <>
-      <CustomCursorProvider>
-        <CustomCursor />
+    <CustomCursorProvider>
+      <CustomCursor />
+      <HelmetProvider>
         <Header />
         <Suspense fallback={<Loader />}>
           <AnimatePresence mode="wait" initial={false}>
@@ -66,8 +67,8 @@ function App() {
             <Footer />
           </AnimatePresence>
         </Suspense>
-      </CustomCursorProvider>
-    </>
+      </HelmetProvider>
+    </CustomCursorProvider>
   );
 }
 
