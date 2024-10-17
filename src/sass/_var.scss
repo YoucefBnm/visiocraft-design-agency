@@ -12,7 +12,7 @@ $display-xl: clamp(1.75rem, 1.25vw + 1.25rem, 2.75rem);
 $display-2xl: clamp(2.75rem, 2.81vw + 1.43rem, 5rem);
 $display-3xl: clamp(3.2rem, 5.42vw + 1.95rem, 9.6rem);
 
-$color-light: #fdfef5;
+$color-light: hsl(67, 72%, 98%);
 $color-light-600: color.scale($color-light, $lightness: -10%);
 $color-light-700: color.scale($color-light, $lightness: -20%);
 $color-light-800: color.scale($color-light, $lightness: -30%);

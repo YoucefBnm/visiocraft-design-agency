@@ -38,8 +38,8 @@ body {
   @include mixins.bg-light;
 }
 ::selection {
-  background-color: var.$color-light-700;
-  color: var.$color-dark-200;
+  background-color: var.$color-light-800;
+  color: #000;
 }
 
 ::-webkit-scrollbar {
@@ -47,12 +47,12 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var.$color-dark;
+  background-color: rgba(var.$color-dark, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background-color: var.$color-primary;
+  background-color: var.$color-primary-800;
 }
 
 a {
