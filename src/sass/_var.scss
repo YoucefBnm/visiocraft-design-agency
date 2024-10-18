@@ -10,13 +10,13 @@ $text-xl: clamp(2.5rem, 1.25vw + 2rem, 3.5rem);
 
 $display-xl: clamp(1.75rem, 1.25vw + 1.25rem, 2.75rem);
 $display-2xl: clamp(2.75rem, 2.81vw + 1.43rem, 5rem);
-$display-3xl: clamp(3.2rem, 5.42vw + 1.95rem, 9.6rem);
+$display-3xl: clamp(3.2rem, 5.42vw + 1.85rem, 9rem);
 
 $color-light: hsl(67, 72%, 98%);
 $color-light-600: color.scale($color-light, $lightness: -10%);
 $color-light-700: color.scale($color-light, $lightness: -20%);
 $color-light-800: color.scale($color-light, $lightness: -30%);
-$color-dark: #252d29;
+$color-dark: hsl(150, 10%, 14%);
 $color-dark-100: color.scale($color-dark, $lightness: 10%);
 $color-dark-200: color.scale($color-dark, $lightness: 20%);
 $color-dark-300: color.scale($color-dark, $lightness: 30%);

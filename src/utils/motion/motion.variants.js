@@ -29,6 +29,11 @@ export const customCursorVariants = {
     scale: 0.4,
     mixBlendMode: "difference",
   },
+  close: {
+    background: "rgba(255,255,255,1)",
+    scale: 0.4,
+    mixBlendMode: "difference",
+  },
   navBtn: {
     background: "rgba(255,255,255,1)",
     scale: 1.2,
@@ -50,6 +55,10 @@ export const customCursorTextVariants = {
   },
   link: {
     text: "",
+  },
+  close: {
+    y: "0%",
+    text: "x",
   },
 };
 

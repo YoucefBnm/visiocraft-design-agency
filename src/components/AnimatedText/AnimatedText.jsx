@@ -16,7 +16,7 @@ const Word = ({ word, style }) => {
           key={`${char}-${index}`}
           className="anim--char"
           variants={transformVariants("bottom")}
-          transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.65 }}
+          transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.4 }}
         >
           {char}
         </motion.span>
@@ -33,7 +33,7 @@ const AnimatedText = ({ text, className, style }) => {
   return (
     <motion.div
       ref={revealRef}
-      transition={{ staggerChildren: 0.05 }}
+      transition={{ staggerChildren: 0.04 }}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       className={`anim ${className}`}
